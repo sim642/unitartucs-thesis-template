@@ -22,6 +22,8 @@
 
 \RequirePackage{babel}
 
+\RequirePackage[toc,page]{appendix}
+
 \newcommand{\supervisorsname}{Supervisor(s)}
 \newcommand{\keywordsname}{Keywords}
 
@@ -29,6 +31,9 @@
 \addto\captionsenglish{%
     \renewcommand{\supervisorsname}{Supervisor(s)}
     \renewcommand{\keywordsname}{Keywords}
+    \renewcommand{\appendixname}{Appendix}%
+    \renewcommand{\appendixtocname}{Appendix}% TODO: why changed from Appendices?
+    \renewcommand{\appendixpagename}{Appendix}% TODO: why changed from Appendices?
 }
 \addto\captionsestonian{%
     \renewcommand{\supervisorsname}{Juhendaja(d)}
@@ -36,6 +41,8 @@
     \renewcommand{\keywordsname}{Võtmesõnad}
     \renewcommand{\refname}{Viidatud kirjandus}%
     \renewcommand{\appendixname}{Lisad}%
+    \renewcommand{\appendixtocname}{Lisad}%
+    \renewcommand{\appendixpagename}{Lisad}%
 }
 
 \newcommand\supervisor[1]{\renewcommand\@supervisor{#1}}
