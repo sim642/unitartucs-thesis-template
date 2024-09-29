@@ -51,6 +51,9 @@
 \newcommand\curriculum[1]{\renewcommand\@curriculum{#1}}
 \newcommand\@curriculum{\@latex@error{No \noexpand\curriculum given}\@ehc}
 
+\newcommand\thesis[1]{\renewcommand\@thesis{#1}}
+\newcommand\@thesis{\@latex@error{No \noexpand\thesis given}\@ehc}
+
 \newcounter{@supervisori}
 \newcounter{@supervisors}
 
@@ -82,13 +85,7 @@
     %\vspace*{\stretch{7}}
     \vspace{20mm}
 
-    \Large
-    \iflanguage{english}{%
-    %Bachelor's Thesis (9 ECTS)
-    Master's Thesis (30 ECTS) % TODO: configurable
-    }{%\iflanguage
-    Bakalaureusetöö (9 EAP) % TODO: configurable
-    }%\iflanguage
+    \Large \@thesis
 
     \end{center}
 
