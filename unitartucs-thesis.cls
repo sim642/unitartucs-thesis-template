@@ -38,23 +38,23 @@
     UNIVERSITY OF TARTU\\
     Faculty of Science and Technology\\
     Institute of Computer Science\\
-    Computer Science Curriculum\\
+    Computer Science Curriculum\\ % TODO: configurable
     %Software Engineering Curriculum\\
     }{%\iflanguage
     TARTU ÜLIKOOL\\
     Loodus- ja täppisteaduste valdkond\\
     Arvutiteaduse instituut\\
-    Informaatika õppekava\\
+    Informaatika õppekava\\ % TODO: configurable
     }%\iflanguage
 
     %\vspace*{\stretch{5}}
     \vspace{25mm}
 
-    \Large Alice Cooper
+    \Large \@author
 
     \vspace{4mm}
 
-    \huge Type Inference for Fourth Order Logic Formulae
+    \huge \@title
 
     %\vspace*{\stretch{7}}
     \vspace{20mm}
@@ -62,9 +62,9 @@
     \Large
     \iflanguage{english}{%
     %Bachelor's Thesis (9 ECTS)
-    Master's Thesis (30 ECTS)
+    Master's Thesis (30 ECTS) % TODO: configurable
     }{%\iflanguage
-    Bakalaureusetöö (9 EAP)
+    Bakalaureusetöö (9 EAP) % TODO: configurable
     }%\iflanguage
 
     \end{center}
@@ -75,7 +75,7 @@
     {
     \setlength{\extrarowheight}{5pt}
     \begin{tabular}{r l}
-    \sffamily \iflanguage{english}{Supervisor(s)}{Juhendaja(d)}: &                    \sffamily Axel Rose, MSc \\
+    \sffamily \iflanguage{english}{Supervisor(s)}{Juhendaja(d)}: &                    \sffamily Axel Rose, MSc \\  % TODO: configurable
                 & \sffamily May Flower, PhD
     \end{tabular}
     }
