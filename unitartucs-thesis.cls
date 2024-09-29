@@ -22,10 +22,17 @@
 
 \RequirePackage{babel}
 
+\newcommand{\keywordsname}{Keywords}
+
 % Change Babel document elements
+\addto\captionsenglish{%
+    \renewcommand{\keywordsname}{Keywords}
+}
 \addto\captionsestonian{%
-  \renewcommand{\refname}{Viidatud kirjandus}%
-  \renewcommand{\appendixname}{Lisad}%
+    \renewcommand{\abstractname}{Lühikokkuvõte}
+    \renewcommand{\keywordsname}{Võtmesõnad}
+    \renewcommand{\refname}{Viidatud kirjandus}%
+    \renewcommand{\appendixname}{Lisad}%
 }
 
 
@@ -87,3 +94,31 @@
     \vfill
     \centerline{\large Tartu \the\year}
 }
+
+\newenvironment{@info}[1]{
+    \noindent\textbf{\large #1}
+    \vspace*{1ex} % TODO: why 3ex only in one language in old template?
+
+    \renewenvironment{abstract}{
+        \noindent\textbf{\abstractname:}
+
+        \noindent\ignorespaces % TODO: why need \ignorespaces?
+    }{\vspace*{1ex}}
+
+    \newcommand*{\keywords}[1]{
+        \noindent\textbf{\keywordsname:}\\ % TODO: why \\ here, but not \cercs?
+        ##1
+
+        \vspace*{1ex}
+    }
+
+    \newcommand*{\cercs}[1]{
+        \noindent\textbf{CERCS:} % TODO: why not \\ here, but in \keywords?
+        ##1
+
+        \vspace*{1ex}
+    }
+}{} % TODO: \filbreak
+
+\newenvironment{info}{\begin{@info}{\@title}}{\end{@info}}
+\newenvironment{otherinfo}[2]{\begin{otherlanguage}{#1}\begin{@info}{#2}}{\end{@info}\end{otherlanguage}}
