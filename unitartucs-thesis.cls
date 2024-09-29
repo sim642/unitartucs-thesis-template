@@ -22,19 +22,24 @@
 
 \RequirePackage{babel}
 
+\newcommand{\supervisorsname}{Supervisor(s)}
 \newcommand{\keywordsname}{Keywords}
 
 % Change Babel document elements
 \addto\captionsenglish{%
+    \renewcommand{\supervisorsname}{Supervisor(s)}
     \renewcommand{\keywordsname}{Keywords}
 }
 \addto\captionsestonian{%
+    \renewcommand{\supervisorsname}{Juhendaja(d)}
     \renewcommand{\abstractname}{Lühikokkuvõte}
     \renewcommand{\keywordsname}{Võtmesõnad}
     \renewcommand{\refname}{Viidatud kirjandus}%
     \renewcommand{\appendixname}{Lisad}%
 }
 
+\newcommand\supervisor[1]{\renewcommand\@supervisor{#1}}
+\newcommand\@supervisor{\@latex@error{No \noexpand\supervisor given}\@ehc}
 
 \renewcommand*{\maketitle}{
     \thispagestyle{empty}
@@ -81,9 +86,10 @@
     \begin{flushright}
     {
     \setlength{\extrarowheight}{5pt}
+    \renewcommand*{\and}{\\ & \sffamily}
+    \newcommand*{\degree}[1]{, ##1}
     \begin{tabular}{r l}
-    \sffamily \iflanguage{english}{Supervisor(s)}{Juhendaja(d)}: &                    \sffamily Axel Rose, MSc \\  % TODO: configurable
-                & \sffamily May Flower, PhD
+    \sffamily \supervisorsname: & \sffamily \@supervisor
     \end{tabular}
     }
     \end{flushright}
