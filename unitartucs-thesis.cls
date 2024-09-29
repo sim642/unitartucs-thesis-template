@@ -215,7 +215,6 @@
     \renewcommand{\andname}{ja}
 }
 \newcommand*{\printlicence}{
-    \addcontentsline{toc}{subsection}{II. \licencename}%
     \newcommand*{\degree}[1]{}%
     \setbox0=\vbox{\setcounter{@supervisors}{1}\renewcommand*{\and}{\stepcounter{@supervisors}}\@supervisor}%
     \setcounter{@supervisori}{1}%
@@ -227,6 +226,25 @@
             \unskip,
         \fi
     }%
-    \section*{II. \licencename}%
+    \section{\licencename}%
     \licencetext
 }
+
+
+% \RequirePackage{bookmark}
+\AtEndPreamble{ % workaround to avoid hyperref option clash
+    \usepackage{bookmark} % need bookmark for \bookmarksetupnext
+}
+
+\AddToHook{env/appendices/before}{
+    % https://tex.stackexchange.com/a/121778
+    \bookmarksetupnext{level=chapter}
+}
+
+\AddToHook{cmd/appendices/after}{ % this is different from env/appendices/begin!
+    % https://tex.stackexchange.com/a/64404
+    \addtocontents{toc}{\let\protect\l@section\protect\l@subsection}
+
+    \renewcommand\thesection{\Roman{section}}
+}
+
