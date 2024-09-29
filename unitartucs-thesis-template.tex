@@ -14,11 +14,11 @@
 
 \documentclass[12pt]{article}
 
-% A package for setting layout and margins for your thesis 
+% A package for setting layout and margins for your thesis
 \usepackage[a4paper]{geometry}
 
 %%=== A4 page setup ===
-%\setlength{\paperwidth}{21.0cm} 
+%\setlength{\paperwidth}{21.0cm}
 %\setlength{\paperheight}{29.7cm}
 %\setlength{\textwidth}{16cm}
 %\setlength{\textheight}{25cm}
@@ -26,13 +26,13 @@
 
 % When you write in Estonian then you want to use text with right character set
 % By default LaTeX does not know what to do with õäöu letters. You have to specify
-% a correct input and font encoding. For that you have to Google the Web     
+% a correct input and font encoding. For that you have to Google the Web
 %
-% For TexShop under MacOS X. The right lines are 
+% For TexShop under MacOS X. The right lines are
 %\usepackage[applemac]{inputenc}
 %\usepackage[T1]{fontenc} %Absolutely critical for *hyphenation* of words with non-ASCII letters.
 %
-% For Windows and Linux the right magic lines are   
+% For Windows and Linux the right magic lines are
 % \usepackage[latin1]{inputenc}
 % \usepackage[latin5]{inputenc}
 %
@@ -47,15 +47,15 @@
 \usepackage{inconsolata} %nicer font for code listings. (Use \ttfamily for lstinline bastype)
 
 
-% Use package babel for English or Estonian 
-% If you use Estonian make sure that Estonian hyphenation is installed 
+% Use package babel for English or Estonian
+% If you use Estonian make sure that Estonian hyphenation is installed
 % - hypen-estonian or eehyp packages
 %
 %===Choose the main language in thesis
-\usepackage[estonian, english]{babel} %the thesis is in English 
+\usepackage[estonian, english]{babel} %the thesis is in English
 %\usepackage[english, estonian]{babel} %the thesis is in Estonian
 
-% Change Babel document elements 
+% Change Babel document elements
 \addto\captionsestonian{%
   \renewcommand{\refname}{Viidatud kirjandus}%
   \renewcommand{\appendixname}{Lisad}%
@@ -73,19 +73,19 @@
 %\addbibresource{unitartucs-thesis.bib}
 
 
-% General packages for math in general, theorems and symbols 
+% General packages for math in general, theorems and symbols
 % Read ftp://ftp.ams.org/ams/doc/amsmath/short-math-guide.pdf for further information
-\usepackage{amsmath} 
+\usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
 
-% Optional calligraphic fonts    
+% Optional calligraphic fonts
 % \usepackage[mathscr]{eucal}
 
 % Print a dot instead of colon in table or figure captions
 \usepackage[labelsep=period]{caption}
 
-% Packages for building tables and tabulars 
+% Packages for building tables and tabulars
 \usepackage{array}
 \usepackage{tabu}   % Wide lines in tables
 \usepackage{xspace} % Non-eatable spaces in macros
@@ -102,7 +102,7 @@
 
 % Packages for defining colourful text together with some colours
 \usepackage{color}
-\usepackage{xcolor} 
+\usepackage{xcolor}
 %\definecolor{dkgreen}{rgb}{0,0.6,0}
 %\definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
@@ -110,7 +110,7 @@
 
 % Standard package for drawing algorithms
 % Since the thesis in article format we must define \chapter for
-% the package algorithm2e (otherwise obscure errors occur) 
+% the package algorithm2e (otherwise obscure errors occur)
 \let\chapter\section
 \usepackage[ruled, vlined, linesnumbered]{algorithm2e}
 
@@ -132,14 +132,14 @@
 
 % Proper way to create coloured code listings
 \usepackage{listings}
-\lstset{ 
+\lstset{
   %language=python,                % the language of the code
   language=C++,
   basicstyle=\footnotesize,        % the size of the fonts that are used for the code
   %numbers=left,                   % where to put the line-numbers
   %numberstyle=\footnotesize,      % the size of the fonts that are used for the line-numbers
-  numberstyle=\tiny\color{gray}, 
-  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line 
+  numberstyle=\tiny\color{gray},
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line
                                    % will be numbered
   numbersep=5pt,                   % how far the line-numbers are from the code
   backgroundcolor=\color{white},   % choose the background color. You must add \usepackage{color}
@@ -148,7 +148,7 @@
   showtabs=false,                  % show tabs within strings adding particular underscores
   frame = lines,
   %frame=single,                   % adds a frame around the code
-  rulecolor=\color{black},		   % if not set, the frame-color may be changed on line-breaks within 
+  rulecolor=\color{black},		   % if not set, the frame-color may be changed on line-breaks within
                                    % not-black text (e.g. commens (green here))
   tabsize=2,                       % sets default tabsize to 2 spaces
   captionpos=b,                    % sets the caption-position to bottom
@@ -169,21 +169,21 @@
 % http://logicmatters.net/resources/ndexamples/proofsty3.html <= writing type rules => use semantic::inference
 % ftp://tug.ctan.org/tex-archive/macros/latex/contrib/semantic/semantic.pdf
 \usepackage{proof}
-\usepackage{semantic} 
+\usepackage{semantic}
 \setlength{\inferLineSkip}{4pt}
 \def\predicatebegin #1\predicateend{$\Gamma \vdash #1$}
 
 % If you really want to draw figures in LaTeX use packages tikz or pstricks
-% However, getting a corresponding illustrations is really painful  
+% However, getting a corresponding illustrations is really painful
 
 
-% Define your favorite macros that you use inside the thesis 
+% Define your favorite macros that you use inside the thesis
 % Name followed by non-removable space
 \newcommand{\proveit}{ProveIt\xspace}
 
 % Macros that make sure that the math mode is set
 \newcommand{\typeF}[1] {\ensuremath{\mathsf{type_{#1}}}\xspace}
-\newcommand{\opDiv}{\ensuremath{\backslash \mathsf{div}}\xspace} 
+\newcommand{\opDiv}{\ensuremath{\backslash \mathsf{div}}\xspace}
 
 % Nice Todo box
 \setlength{\marginparwidth}{2cm}
@@ -222,7 +222,7 @@ Informaatika õppekava\\
 
 \vspace{4mm}
 
-\huge Type Inference for Fourth Order Logic Formulae 
+\huge Type Inference for Fourth Order Logic Formulae
 
 %\vspace*{\stretch{7}}
 \vspace{20mm}
@@ -242,7 +242,7 @@ Bakalaureusetöö (9 EAP)
 \begin{flushright}
  {
  \setlength{\extrarowheight}{5pt}
- \begin{tabular}{r l} 
+ \begin{tabular}{r l}
   \sffamily \iflanguage{english}{Supervisor(s)}{Juhendaja(d)}: &                    \sffamily Axel Rose, MSc \\
              & \sffamily May Flower, PhD
  \end{tabular}
@@ -257,11 +257,11 @@ Bakalaureusetöö (9 EAP)
 
 %===END TITLE PAGE
 
-% If the thesis is printed on both sides of the page then 
+% If the thesis is printed on both sides of the page then
 % the second page must be must be empty. Comment this out
 % if you print only to one side of the page comment this out
 %\newpage
-%\thispagestyle{empty}    
+%\thispagestyle{empty}
 %\phantom{Text to fill the page}
 % END OF EXTRA PAGE WITHOUT NUMBER
 
@@ -279,9 +279,9 @@ Bakalaureusetöö (9 EAP)
 \noindent\textbf{Abstract:}
 
 \noindent
-Many interpreting program languages are dynamically typed, such as Visual Basic or Python. As a result, it is easy to write programs that crash due to mismatches of provided and expected data types.  One possible solution to this problem is automatic type derivation during compilation. In this work, we consider study how to detect type errors in the \textsc{Whitespace} language by using fourth-order logic formulae as annotations. The main result of this thesis is a new triple-exponential type inference algorithm for the fourth-order logic formulae. This is a significant advancement as the question of whether there exists such an algorithm was an open question. 
-All previous attempts to solve the problem lead to logical inconsistencies or require tedious user interaction in terms of interpretative dance. Although the resulting algorithm is slightly inefficient, it can be used to detect obscure programming bugs in the \textsc{Whitespace} language. The latter significantly improves productivity. Our practical experiments showed that productivity is comparable to average Java programmer.   
-From a theoretical viewpoint, the result is only a small advancement in a rigorous treatment of higher-order logic formulae. The results obtained by us do not generalise to formulae with the fifth or higher order. 
+Many interpreting program languages are dynamically typed, such as Visual Basic or Python. As a result, it is easy to write programs that crash due to mismatches of provided and expected data types.  One possible solution to this problem is automatic type derivation during compilation. In this work, we consider study how to detect type errors in the \textsc{Whitespace} language by using fourth-order logic formulae as annotations. The main result of this thesis is a new triple-exponential type inference algorithm for the fourth-order logic formulae. This is a significant advancement as the question of whether there exists such an algorithm was an open question.
+All previous attempts to solve the problem lead to logical inconsistencies or require tedious user interaction in terms of interpretative dance. Although the resulting algorithm is slightly inefficient, it can be used to detect obscure programming bugs in the \textsc{Whitespace} language. The latter significantly improves productivity. Our practical experiments showed that productivity is comparable to average Java programmer.
+From a theoretical viewpoint, the result is only a small advancement in a rigorous treatment of higher-order logic formulae. The results obtained by us do not generalise to formulae with the fifth or higher order.
 
 \vspace*{1ex}
 
@@ -303,7 +303,7 @@ From a theoretical viewpoint, the result is only a small advancement in a rigoro
 \noindent\textbf{\large Tüübituletus neljandat järku loogikavalemitele}
 \vspace*{1ex}
 
-\noindent\textbf{Lühikokkuvõte:} 
+\noindent\textbf{Lühikokkuvõte:}
 
 %\noindent ...
 
@@ -351,7 +351,7 @@ the paper is significantly enhanced by their inclusion.}
 % Remember to remove this from the final thesis version
 \newpage
 \listoftodos[Unsolved issues]
-% END OF TODO PAGE 
+% END OF TODO PAGE
 
 
 \newpage
@@ -359,7 +359,7 @@ the paper is significantly enhanced by their inclusion.}
 
 \TODO{What is it in simple terms (title)?}
 \TODO{Why should anyone care?}
-\TODO{What was my contribution?} 
+\TODO{What was my contribution?}
 \TODO{What you are doing in each section (a sentence or two per section)}
 
 Tip: if it's hard for you to start writing, then try to split it into smaller parts, e.g., if the title is ``Type Inference for a Cryptographic Protocol Prover Tool'' then the ``What is it'' can be divided into ``what is type inference'', ``what is cryptographic protocol'' and ``what is the prover tool''. These three can also be split into smaller parts etc.
@@ -368,7 +368,7 @@ Tip: if it's hard for you to start writing, then try to split it into smaller pa
 
 
 \newpage
-\section{Title of Section 2} 
+\section{Title of Section 2}
 \TODO{Short description of what this section is about}
 
 
@@ -386,9 +386,9 @@ Some text...
 
 
 
-\subsection{Title of Subsection 2} 
+\subsection{Title of Subsection 2}
 
-Rule: If you divide the text into subsections (or subsubsections), then there has to be at least two of them, otherwise do not create any. 
+Rule: If you divide the text into subsections (or subsubsections), then there has to be at least two of them, otherwise do not create any.
 
 Tip: You can also use paragraphs, e.g.
 \paragraph{Type rules for integers.} Some text ...
@@ -407,21 +407,21 @@ LaTeX  internally numbers all kinds of objects that have sequence numbers:
 \item figures, tables, algorithms;
 \item equations, equation arrays.
 \end{itemize}
-To reference them automatically, you have to generate a label using \texttt{$\backslash$label\{some-name\}} just after the object that has the number inside. Usually, labels of different objects are split into different namespaces by adding a dedicated prefix, such as \texttt{sec:}, \texttt{fig:}. To use the corresponding reference, you must use command \texttt{$\backslash$ref} or \texttt{$\backslash$eqref}. For instance, we can reference this subsection by calling Section~\ref{sec:using_ref}. Note that there should be a nonbreakable space \texttt{\~} between the name of the object and the reference so that they would not appear on different lines (does not work in Estonian).          
+To reference them automatically, you have to generate a label using \texttt{$\backslash$label\{some-name\}} just after the object that has the number inside. Usually, labels of different objects are split into different namespaces by adding a dedicated prefix, such as \texttt{sec:}, \texttt{fig:}. To use the corresponding reference, you must use command \texttt{$\backslash$ref} or \texttt{$\backslash$eqref}. For instance, we can reference this subsection by calling Section~\ref{sec:using_ref}. Note that there should be a nonbreakable space \texttt{\~} between the name of the object and the reference so that they would not appear on different lines (does not work in Estonian).
 
 
 
 \paragraph{Citations.}
-Usually, you also want to reference articles, webpages, tools or programs, or books. For that, you should use citations and references. The system is similar to the cross-referencing system in LaTeX. For each reference, you must assign a unique label. Again, there are many naming schemes for labels. However, as you have a short document, anything works. To reference to a particular source you must use \texttt{$\backslash$cite\{label\}} or \texttt{$\backslash$cite[page]\{label\}}. 
+Usually, you also want to reference articles, webpages, tools or programs, or books. For that, you should use citations and references. The system is similar to the cross-referencing system in LaTeX. For each reference, you must assign a unique label. Again, there are many naming schemes for labels. However, as you have a short document, anything works. To reference to a particular source you must use \texttt{$\backslash$cite\{label\}} or \texttt{$\backslash$cite[page]\{label\}}.
 
 References themselves can be part of a LaTeX source file. For that, you need to define a bibliography section. However, this approach is really uncommon. It is much easier to use BibTeX to synthesise the right reference form for you. For that, you must use two commands in the LaTeX source:
 \begin{itemize}
 \item $\backslash$bibliographystyle\{alpha\} or $\backslash$bibliographystyle\{plain\}
 \item $\backslash$bibliography\{file-name\}
 \end{itemize}
-The first command determines whether the references are numbered by letter-number combinations or by cryptic numbers. It is more common to use \texttt{alpha} style. The second command determines the file containing the bibliographic entries. The file should end with \texttt{bib} extension. Each reference there is in a specific form. The simplest way to avoid all technicalities is to use graphical frontend  Jabref (\url{http://jabref.sourceforge.net/}) to manage references. Another alternative is to use the DBLP database of references and copy BibTeX entries directly from there.   
-    
-   
+The first command determines whether the references are numbered by letter-number combinations or by cryptic numbers. It is more common to use \texttt{alpha} style. The second command determines the file containing the bibliographic entries. The file should end with \texttt{bib} extension. Each reference there is in a specific form. The simplest way to avoid all technicalities is to use graphical frontend  Jabref (\url{http://jabref.sourceforge.net/}) to manage references. Another alternative is to use the DBLP database of references and copy BibTeX entries directly from there.
+
+
 The following paragraph shows how references can be used. Game-based proving is a way to analyse the security of a cryptographic protocol~\cite{GameB_1, GameB_2}. There are automatic provers, such as {CertiCrypt\-}~\cite{certicrypt} and ProVerif~\cite{proVerif}.
 
 
@@ -435,7 +435,7 @@ Here are a few examples of how to add figures or pictures to your thesis (see Fi
 Rule: All the figures, tables and extras in the thesis have to be referred to somewhere in the text.
 
 
-\begin{figure} [ht] %try to place the figure here (next option top of the page) 
+\begin{figure} [ht] %try to place the figure here (next option top of the page)
 \begin{center}
 \includegraphics[width=0.8\textwidth]{computational_model_function}
 \caption{The title of the Figure.}
@@ -528,10 +528,10 @@ There are two figures side by side in Figure~\ref{fig:LCA_2_solutions}.
 
 Numbered list example:
 \begin{enumerate}
-	\item item one; 
+	\item item one;
 	\item item two;
 	\item item three.
-\end{enumerate} 
+\end{enumerate}
 
 \subsection{Math mode}
 Example:
@@ -547,13 +547,13 @@ Aligning:
 Hint: Variables or equations in text are separated with \$ sign, e.g. $a$, $x - y$.
 
 \paragraph{Inference Rules}
-\[ 
-	\inference[addition]{x : T & y : T}{x + y : T} 
+\[
+	\inference[addition]{x : T & y : T}{x + y : T}
 \]
 Bigger example:
 \[
-\inference[assign]{c := a + b & 
-	\inference[addG]{a : \typeRat & 
+\inference[assign]{c := a + b &
+	\inference[addG]{a : \typeRat &
 		\inference[var]{b : \typeInt & \typeInt \subseteq \typeRat}{b : \typeRat}
 		}{a + b : \typeRat}
 	}{c : \typeRat}
@@ -568,7 +568,7 @@ Bigger example:
 	\KwResult{Type checking result; In addition, type table \typeF{type\_G} for global variables, \typeF{game} for the main game and \typeF{fun} for each $fun \in F$}
 	\SetKwData{s}{s}
 	\BlankLine
-	
+
 	\While{something changed in last cycle}{
 		\lForEach{global statement \s} {
 			\parseStatement{\s, \typeF{type\_G}}\;
@@ -623,7 +623,7 @@ Tip: We can use minipage to create a frame around some important information.
 \clearpage
 \section{Conclusion}
 
-\TODO{what did you do?} 
+\TODO{what did you do?}
 \TODO{What are the results?}
 \TODO{future work?}
 
@@ -643,8 +643,8 @@ Tip: We can use minipage to create a frame around some important information.
 % Use alternative local LaTeX bibliography
 \begin{comment}
 \begin{thebibliography}{9}
-\bibitem{proVerif} 
-  Bruno Blanchet. 
+\bibitem{proVerif}
+  Bruno Blanchet.
   Proverif: Cryptographic protocol verifier in the formal model.
   \url{http://www.proverif.ens.fr/}.
   (checked 15.05.2012)
@@ -701,7 +701,7 @@ I grant the University of Tartu a permit to make the work specified in p. 1 avai
 \item
 I am aware of the fact that the author retains the rights specified in p. 1 and 2.
 \item
-I certify that granting the non-exclusive licence does not infringe other persons' intellectual property rights or rights arising from the personal data protection legislation. 
+I certify that granting the non-exclusive licence does not infringe other persons' intellectual property rights or rights arising from the personal data protection legislation.
 \end{enumerate}
 
 \noindent
@@ -739,7 +739,7 @@ Annan Tartu Ülikoolile loa teha punktis 1 nimetatud teos üldsusele kättesaada
 \item
 Olen teadlik, et punktides 1 ja 2 nimetatud õigused jäävad alles ka autorile.
 \item
-Kinnitan, et lihtlitsentsi andmisega ei riku ma teiste isikute intellektuaalomandi ega isikuandmete kaitse õigusaktidest tulenevaid õigusi. 
+Kinnitan, et lihtlitsentsi andmisega ei riku ma teiste isikute intellektuaalomandi ega isikuandmete kaitse õigusaktidest tulenevaid õigusi.
 \end{enumerate}
 
 \noindent
