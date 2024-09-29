@@ -123,12 +123,12 @@
 \newenvironment{info}{\begin{@info}{\@title}}{\end{@info}}
 \newenvironment{otherinfo}[2]{\begin{otherlanguage}{#1}\begin{@info}{#2}}{\end{@info}\end{otherlanguage}}
 
-\newcommand{\licencehint}[2]{\\\hspace*{#1}\textsl(#2)\par}
+\newcommand{\licencehint}[2]{\\\hspace*{#1}\textsl(#2)\par} % TODO: fix \textsl only applying to (? or remove \licencehint altogether?
 % babel's \addto doesn't take \long argument, so put use intermediate macro
 \newcommand*{\licencetext@english}{
     \subsection*{Non-exclusive licence to reproduce thesis and make thesis public}
 
-    I, \textbf{Alice Cooper}, %author's name
+    I, \textbf{\@author}, %author's name
     \licencehint{10mm}{author's name}
 
     \begin{enumerate}
@@ -137,7 +137,7 @@
     \par
     reproduce, for the purpose of preservation, including for adding to the DSpace digital archives until the expiry of the term of copyright,
     \par
-    \textbf{Type Inference for Fourth Order Logic Formulae}, %
+    \textbf{\@title}, %
     \licencehint{10mm}{title of thesis}
     \par
     supervised by Axel Rose and May Flower. %supervisor's name
@@ -151,20 +151,20 @@
     \end{enumerate}
 
     \noindent
-    Alice Cooper\\ %author's name
+    \@author\\ %author's name
     \textbf{\textsl{dd/mm/yyyy}}
 }
 \newcommand*{\licencetext@estonian}{
     \subsection*{Lihtlitsents lõputöö reprodutseerimiseks ja üldsusele kättesaadavaks tegemiseks}
 
-    Mina, \textbf{Alice Cooper}, %author's name
+    Mina, \textbf{\@author}, %author's name
     \licencehint{10mm}{autori nimi}
 
     \begin{enumerate}
     \item
     annan Tartu Ülikoolile tasuta loa (lihtlitsentsi) minu loodud teose
     \par
-    \textbf{Tüübituletus neljandat järku loogikavalemitele}, %title of thesis
+    \textbf{\@title}, %title of thesis
         \licencehint{10mm}{lõputöö pealkiri}
     \par
     mille juhendaja(d) on Axel Rose ja May Flower, %supervisor's name(s)
@@ -181,7 +181,7 @@
     \end{enumerate}
 
     \noindent
-    Alice Cooper\\ %author's name
+    \@author\\ %author's name
     \textbf{\textsl{pp.kk.aaaa}}
 }
 
