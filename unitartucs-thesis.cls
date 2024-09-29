@@ -48,6 +48,9 @@
 \newcommand\supervisor[1]{\renewcommand\@supervisor{#1}}
 \newcommand\@supervisor{\@latex@error{No \noexpand\supervisor given}\@ehc}
 
+\newcommand\curriculum[1]{\renewcommand\@curriculum{#1}}
+\newcommand\@curriculum{\@latex@error{No \noexpand\curriculum given}\@ehc}
+
 \newcounter{@supervisori}
 \newcounter{@supervisors}
 
@@ -60,14 +63,12 @@
     UNIVERSITY OF TARTU\\
     Faculty of Science and Technology\\
     Institute of Computer Science\\
-    Computer Science Curriculum\\ % TODO: configurable
-    %Software Engineering Curriculum\\
     }{%\iflanguage
     TARTU ÜLIKOOL\\
     Loodus- ja täppisteaduste valdkond\\
     Arvutiteaduse instituut\\
-    Informaatika õppekava\\ % TODO: configurable
     }%\iflanguage
+    \@curriculum\\
 
     %\vspace*{\stretch{5}}
     \vspace{25mm}
