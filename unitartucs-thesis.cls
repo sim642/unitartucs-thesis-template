@@ -185,11 +185,19 @@
     \textbf{\textsl{pp.kk.aaaa}}
 }
 
+\newcommand*{\licencename}{Licence}
 \newcommand*{\licencetext}{}
 \addto\captionsenglish{%
+    \renewcommand{\licencename}{Licence}
     \renewcommand{\licencetext}{\licencetext@english}
 }
 \addto\captionsestonian{%
+    \renewcommand{\licencename}{Litsents}
     \renewcommand{\licencetext}{\licencetext@estonian}
 }
-\newcommand*{\printlicence}{\licencetext}
+\newcommand*{\printlicence}{
+    \section*{II. \licencename}
+
+    \addcontentsline{toc}{subsection}{II. \licencename}
+    \licencetext
+}
