@@ -41,6 +41,9 @@
 \newcommand\supervisor[1]{\renewcommand\@supervisor{#1}}
 \newcommand\@supervisor{\@latex@error{No \noexpand\supervisor given}\@ehc}
 
+\newcounter{@supervisori}
+\newcounter{@supervisors}
+
 \renewcommand*{\maketitle}{
     \thispagestyle{empty}
     \begin{center}
@@ -146,7 +149,7 @@
     \textbf{\@title}, %
     \licencehint{10mm}{title of thesis}
     \par
-    supervised by Axel Rose and May Flower. %supervisor's name
+    supervised by \@supervisor. %supervisor's name
     \licencehint{10mm}{supervisor's name}
     \item
     I grant the University of Tartu a permit to make the work specified in p. 1 available to the public via the web environment of the University of Tartu, including via the DSpace digital archives, under the Creative Commons licence CC BY NC ND 3.0, which allows, by giving appropriate credit to the author, to reproduce, distribute the work and communicate it to the public and prohibits the creation of derivative works and any commercial use of the work until the expiry of the term of copyright.
@@ -173,7 +176,7 @@
     \textbf{\@title}, %title of thesis
         \licencehint{10mm}{lõputöö pealkiri}
     \par
-    mille juhendaja(d) on Axel Rose ja May Flower, %supervisor's name(s)
+    mille juhendaja(d) on \@supervisor, %supervisor's name(s)
     \licencehint{10mm}{juhendaja nimi}
     \par
     reprodutseerimiseks eesmärgiga seda säilitada, sealhulgas lisada digitaalarhiivi DSpace kuni autoriõiguse kehtivuse lõppemiseni.
@@ -193,17 +196,30 @@
 
 \newcommand*{\licencename}{Licence}
 \newcommand*{\licencetext}{}
+\newcommand*{\andname}{and}
 \addto\captionsenglish{%
     \renewcommand{\licencename}{Licence}
     \renewcommand{\licencetext}{\licencetext@english}
+    \renewcommand{\andname}{and}
 }
 \addto\captionsestonian{%
     \renewcommand{\licencename}{Litsents}
     \renewcommand{\licencetext}{\licencetext@estonian}
+    \renewcommand{\andname}{ja}
 }
 \newcommand*{\printlicence}{
-    \section*{II. \licencename}
-
-    \addcontentsline{toc}{subsection}{II. \licencename}
+    \addcontentsline{toc}{subsection}{II. \licencename}%
+    \newcommand*{\degree}[1]{}%
+    \setbox0=\vbox{\setcounter{@supervisors}{1}\renewcommand*{\and}{\stepcounter{@supervisors}}\@supervisor}%
+    \setcounter{@supervisori}{1}%
+    \renewcommand*{\and}{%
+        \stepcounter{@supervisori}\relax
+        \ifnum\value{@supervisori}=\value{@supervisors}
+            \unskip\andname\
+        \else%
+            \unskip,
+        \fi
+    }%
+    \section*{II. \licencename}%
     \licencetext
 }
