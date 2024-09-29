@@ -122,3 +122,74 @@
 
 \newenvironment{info}{\begin{@info}{\@title}}{\end{@info}}
 \newenvironment{otherinfo}[2]{\begin{otherlanguage}{#1}\begin{@info}{#2}}{\end{@info}\end{otherlanguage}}
+
+\newcommand{\licencehint}[2]{\\\hspace*{#1}\textsl(#2)\par}
+% babel's \addto doesn't take \long argument, so put use intermediate macro
+\newcommand*{\licencetext@english}{
+    \subsection*{Non-exclusive licence to reproduce thesis and make thesis public}
+
+    I, \textbf{Alice Cooper}, %author's name
+    \licencehint{10mm}{author's name}
+
+    \begin{enumerate}
+    \item
+    herewith grant the University of Tartu a free permit (non-exclusive licence) to
+    \par
+    reproduce, for the purpose of preservation, including for adding to the DSpace digital archives until the expiry of the term of copyright,
+    \par
+    \textbf{Type Inference for Fourth Order Logic Formulae}, %
+    \licencehint{10mm}{title of thesis}
+    \par
+    supervised by Axel Rose and May Flower. %supervisor's name
+    \licencehint{10mm}{supervisor's name}
+    \item
+    I grant the University of Tartu a permit to make the work specified in p. 1 available to the public via the web environment of the University of Tartu, including via the DSpace digital archives, under the Creative Commons licence CC BY NC ND 3.0, which allows, by giving appropriate credit to the author, to reproduce, distribute the work and communicate it to the public and prohibits the creation of derivative works and any commercial use of the work until the expiry of the term of copyright.
+    \item
+    I am aware of the fact that the author retains the rights specified in p. 1 and 2.
+    \item
+    I certify that granting the non-exclusive licence does not infringe other persons' intellectual property rights or rights arising from the personal data protection legislation.
+    \end{enumerate}
+
+    \noindent
+    Alice Cooper\\ %author's name
+    \textbf{\textsl{dd/mm/yyyy}}
+}
+\newcommand*{\licencetext@estonian}{
+    \subsection*{Lihtlitsents lõputöö reprodutseerimiseks ja üldsusele kättesaadavaks tegemiseks}
+
+    Mina, \textbf{Alice Cooper}, %author's name
+    \licencehint{10mm}{autori nimi}
+
+    \begin{enumerate}
+    \item
+    annan Tartu Ülikoolile tasuta loa (lihtlitsentsi) minu loodud teose
+    \par
+    \textbf{Tüübituletus neljandat järku loogikavalemitele}, %title of thesis
+        \licencehint{10mm}{lõputöö pealkiri}
+    \par
+    mille juhendaja(d) on Axel Rose ja May Flower, %supervisor's name(s)
+    \licencehint{10mm}{juhendaja nimi}
+    \par
+    reprodutseerimiseks eesmärgiga seda säilitada, sealhulgas lisada digitaalarhiivi DSpace kuni autoriõiguse kehtivuse lõppemiseni.
+    \par
+    \item
+    Annan Tartu Ülikoolile loa teha punktis 1 nimetatud teos üldsusele kättesaadavaks Tartu Ülikooli veebikeskkonna, sealhulgas digitaalarhiivi DSpace kaudu Creative Commonsi litsentsiga CC BY NC ND 3.0, mis lubab autorile viidates teost reprodutseerida, levitada ja üldsusele suunata ning keelab luua tuletatud teost ja kasutada teost ärieesmärgil, kuni autoriõiguse kehtivuse lõppemiseni.
+    \item
+    Olen teadlik, et punktides 1 ja 2 nimetatud õigused jäävad alles ka autorile.
+    \item
+    Kinnitan, et lihtlitsentsi andmisega ei riku ma teiste isikute intellektuaalomandi ega isikuandmete kaitse õigusaktidest tulenevaid õigusi.
+    \end{enumerate}
+
+    \noindent
+    Alice Cooper\\ %author's name
+    \textbf{\textsl{pp.kk.aaaa}}
+}
+
+\newcommand*{\licencetext}{}
+\addto\captionsenglish{%
+    \renewcommand{\licencetext}{\licencetext@english}
+}
+\addto\captionsestonian{%
+    \renewcommand{\licencetext}{\licencetext@estonian}
+}
+\newcommand*{\printlicence}{\licencetext}
