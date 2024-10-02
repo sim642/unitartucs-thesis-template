@@ -244,7 +244,7 @@
     % Packages for getting clickable links in PDF file
     %\usepackage{hyperref}
     \usepackage[hidelinks]{hyperref} %hide red (blue,green) boxes around links
-    \usepackage{bookmark} % need bookmark for \bookmarksetupnext
+    \usepackage[numbered,open]{bookmark} % need bookmark for \bookmarksetupnext
 }
 
 \AddToHook{env/appendices/before}{
