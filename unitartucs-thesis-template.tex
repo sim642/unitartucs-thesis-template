@@ -173,34 +173,19 @@
 % \thesis{Bakalaureusetöö (9 EAP)}
 % \thesis{Bachelor's Thesis (9 ECTS)}
 
-%%% BEGIN DOCUMENT
+
 \begin{document}
 
-%===TITLE PAGE
-\maketitle
+\maketitle % title page
+\input{sections/info} % info page
 
-% If the thesis is printed on both sides of the page then
-% the second page must be must be empty. Comment this out
-% if you print only to one side of the page comment this out
-%\newpage
-%\thispagestyle{empty}
-%\phantom{Text to fill the page}
-% END OF EXTRA PAGE WITHOUT NUMBER
-
-
-%===COMPULSORY INFO PAGE
-\input{sections/info}
-
-
+% table of contents
 \newpage
 \tableofcontents
-
 
 % Remember to remove this from the final thesis version
 \newpage
 \listoftodos[Unsolved issues]
-% END OF TODO PAGE
-
 
 \input{sections/introduction}
 \input{sections/section2}
@@ -208,25 +193,20 @@
 \input{sections/other-data}
 \input{sections/conclusion}
 
-
-
 % BibLaTeX bibliography
-\newpage
-\printbibliography[heading=bibintoc] %biblatex
+\clearpage % typeset all figures before bibliography and start new page
+\printbibliography[heading=bibintoc]
 
-
+% appendices
 \newpage
 \begin{appendices}
 
 \input{sections/glossary}
 
-\newpage
-
-%=== Licence
+% licence
+\clearpage
 \printlicence
 
 \end{appendices}
 
 \end{document}
-
-
