@@ -24,6 +24,10 @@
 
 \RequirePackage[toc,page]{appendix}
 
+\RequirePackage{array}
+% Print a dot instead of colon in table or figure captions
+\RequirePackage[labelsep=period]{caption}
+
 \newcommand{\supervisorsname}{Supervisor(s)}
 \newcommand{\keywordsname}{Keywords}
 
