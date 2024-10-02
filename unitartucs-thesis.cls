@@ -32,11 +32,13 @@
 \RequirePackage[labelsep=period]{caption}
 
 \newcommand{\supervisorsname}{Supervisor(s)}
+\newcommand{\infoname}{Info page}
 \newcommand{\keywordsname}{Keywords}
 
 % Change Babel document elements
 \addto\captionsenglish{%
     \renewcommand{\supervisorsname}{Supervisor(s)}
+    \renewcommand{\infoname}{Info page}
     \renewcommand{\keywordsname}{Keywords}
     \renewcommand{\appendixname}{Appendix}%
     \renewcommand{\appendixtocname}{Appendix}% TODO: why changed from Appendices?
@@ -44,6 +46,7 @@
 }
 \addto\captionsestonian{%
     \renewcommand{\supervisorsname}{Juhendaja(d)}
+    \renewcommand{\infoname}{Infoleht}
     \renewcommand{\abstractname}{Lühikokkuvõte}
     \renewcommand{\keywordsname}{Võtmesõnad}
     \renewcommand{\refname}{Viidatud kirjandus}%
