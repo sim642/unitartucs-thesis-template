@@ -22,6 +22,9 @@
 
 \RequirePackage{babel}
 
+\RequirePackage{titlesec}
+\newcommand{\sectionbreak}{\clearpage\phantomsection}
+
 \RequirePackage[toc,page]{appendix}
 
 \RequirePackage{array}
