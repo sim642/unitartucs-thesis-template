@@ -37,15 +37,16 @@
 
 
 % If you have problems with Estonian keywords in the bibliography
-%\usepackage{biblatex}
+% \usepackage{biblatex}
 %\usepackage[backend=biber]{biblatex}
-%\usepackage[style=alphabetic]{biblatex}
+\usepackage[style=alphabetic]{biblatex}
 %% plain --> \usepackage[style=numeric]{biblatex}
 %% abbrv --> \usepackage[style=numeric,firstinits=true]{biblatex}
 %% unsrt --> \usepackage[style=numeric,sorting=none]{biblatex}
 %% alpha --> \usepackage[style=alphabetic]{biblatex}
 %\DefineBibliographyStrings{estonian}{and={ja}}
-%\addbibresource{unitartucs-thesis.bib}
+\addbibresource{unitartucs-thesis.bib}
+%plain=[1], alpha=[BGZ09]
 
 
 % General packages for math in general, theorems and symbols
@@ -208,33 +209,11 @@
 \input{sections/conclusion}
 
 
+
+% BibLaTeX bibliography
 \newpage
-
-% BibTeX bibliography
-\bibliographystyle{alpha} %plain=[1], alpha=[BGZ09]
-\bibliography{unitartucs-thesis}
-
 \addcontentsline{toc}{section}{\refname}
-
-
-% Use Biblatex if you have problems with Estonian keywords
-%\printbibliography %biblatex
-
-
-% Use alternative local LaTeX bibliography
-\begin{comment}
-\begin{thebibliography}{9}
-\bibitem{proVerif}
-  Bruno Blanchet.
-  Proverif: Cryptographic protocol verifier in the formal model.
-  \url{http://www.proverif.ens.fr/}.
-  (checked 15.05.2012)
-\bibitem{GameB_1} GameB1
-\bibitem{GameB_2} GameB2
-\bibitem{certicrypt} certicrypt
-\bibitem{kamm12} kamm12
-\end{thebibliography}
-\end{comment}
+\printbibliography %biblatex
 
 
 \newpage
