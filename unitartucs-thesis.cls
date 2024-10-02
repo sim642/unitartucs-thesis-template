@@ -238,6 +238,10 @@
 
 % \RequirePackage{bookmark}
 \AtEndPreamble{ % workaround to avoid hyperref option clash
+    % Packages for getting clickable links in PDF file
+    %\usepackage{hyperref}
+    \usepackage[hidelinks]{hyperref} %hide red (blue,green) boxes around links
+    \usepackage[all]{hypcap} % TODO: is this necessary?
     \usepackage{bookmark} % need bookmark for \bookmarksetupnext
 }
 
