@@ -130,14 +130,14 @@
     }{\vspace*{1ex}}
 
     \newcommand*{\keywords}[1]{
-        \noindent\textbf{\keywordsname:}\\ % TODO: why \\ here, but not \cercs?
+        \noindent\textbf{\keywordsname:}\\
         ##1
 
         \vspace*{1ex}
     }
 
     \newcommand*{\cercs}[1]{
-        \noindent\textbf{CERCS:} % TODO: why not \\ here, but in \keywords?
+        \noindent\textbf{CERCS:}\\
         ##1
 
         \vspace*{1ex}
