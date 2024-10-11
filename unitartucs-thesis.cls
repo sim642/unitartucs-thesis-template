@@ -142,7 +142,7 @@
 
         \vspace*{1ex}
     }
-}{} % TODO: \filbreak
+}{\filbreak\vspace{4ex}}
 
 \newenvironment{info}{\begin{@info}{\@title}}{\end{@info}}
 \newenvironment{otherinfo}[2]{\begin{otherlanguage}{#1}\begin{@info}{#2}}{\end{@info}\end{otherlanguage}}
