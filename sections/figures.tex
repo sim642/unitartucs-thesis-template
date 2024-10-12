@@ -37,15 +37,16 @@ Tip: If you add a screenshot, then labeling the parts might help make the text m
 
 
 \begin{figure} [htbp]
-\begin{tabular}{c c}
-%
-\begin{minipage}{0.45\textwidth}
+  \centering
+\begin{subfigure}{0.45\textwidth}
 \includegraphics[width=\textwidth]{LCA_2_solutions}
-\end{minipage}
-%
-&
-\begin{minipage}{0.55\textwidth}
+\caption{Example graph.}
+\end{subfigure}
+\hfil
+% TODO: mixing subfigure and subtable in figure is odd
+\begin{subtable}{0.3\textwidth}
 \centering
+\caption{Descendants per node.}
 \begin{tabular}{cl}
   \toprule
 	Node & Decendants \\
@@ -61,8 +62,7 @@ Tip: If you add a screenshot, then labeling the parts might help make the text m
   9 & 3, 4, 5, 6, 7\\
   \bottomrule
 \end{tabular}
-\end{minipage}
-\end{tabular}
+\end{subtable}
 %
 \caption{Example how to put two figures parallel to each other.}
 \label{fig:LCA_2_solutions}
