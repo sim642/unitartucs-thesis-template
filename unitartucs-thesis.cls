@@ -25,6 +25,11 @@
 \RequirePackage{babel}
 \RequirePackage[style=ddmmyyyy]{datetime2}
 
+\AddToHook{package/inputenc/before}{ % TODO: what if inputenc not loaded?
+    \usepackage{fvextra} % avoid warning
+    \usepackage{csquotes} % needs loading after inputenc to avoid warning
+}
+
 \RequirePackage{titlesec}
 \newcommand{\sectionbreak}{\clearpage\phantomsection}
 
