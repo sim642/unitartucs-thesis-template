@@ -4,9 +4,11 @@
 
 \DeclareOption{english}{
     \PassOptionsToPackage{english}{babel}
+    \PassOptionsToPackage{datesep=/}{datetime2}
 }
 \DeclareOption{estonian}{
     \PassOptionsToPackage{estonian}{babel}
+    \PassOptionsToPackage{datesep=.}{datetime2}
 }
 
 \ProcessOptions* % process options in order for correct language order for babel
@@ -21,6 +23,7 @@
 \RequirePackage{inconsolata} %nicer font for code listings. (Use \ttfamily for lstinline bastype)
 
 \RequirePackage{babel}
+\RequirePackage[style=ddmmyyyy]{datetime2}
 
 \RequirePackage{titlesec}
 \newcommand{\sectionbreak}{\clearpage\phantomsection}
@@ -54,6 +57,10 @@
     \renewcommand{\appendixtocname}{Lisad}%
     \renewcommand{\appendixpagename}{Lisad}%
 }
+
+\DTMsavenow{@date}
+\renewcommand\date[1]{\DTMsavedate{@date}{#1}}
+\renewcommand\@date{\DTMusedate{@date}}
 
 \newcommand\supervisor[1]{\renewcommand\@supervisor{#1}}
 \newcommand\@supervisor{\@latex@error{No \noexpand\supervisor given}\@ehc}
@@ -116,7 +123,7 @@
     %\vspace{10mm}
 
     \vfill
-    \centerline{\large Tartu \the\year}
+    \centerline{\large Tartu \DTMfetchyear{@date}}
 }
 
 \newenvironment{@info}[1]{
@@ -171,7 +178,7 @@
 
     \noindent
     \@author\\ %author's name
-    \textbf{\textsl{dd/mm/yyyy}}
+    \textbf{\textsl{\@date}}
 }
 \newcommand*{\licencetext@estonian}{
     \subsection*{Lihtlitsents lõputöö reprodutseerimiseks ja üldsusele kättesaadavaks tegemiseks}
@@ -198,7 +205,7 @@
 
     \noindent
     \@author\\ %author's name
-    \textbf{\textsl{pp.kk.aaaa}}
+    \textbf{\textsl{\@date}}
 }
 
 \newcommand*{\licencename}{Licence}
