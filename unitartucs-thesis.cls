@@ -158,7 +158,7 @@
     herewith grant the University of Tartu a free permit (non-exclusive licence) to
     reproduce, for the purpose of preservation, including for adding to the DSpace digital archives until the expiry of the term of copyright,
     \par
-    \textbf{\@title}, %
+    \enquote{\textbf{\@title}}, %
     \par
     supervised by \@supervisor. %supervisor's name
     \item
@@ -182,7 +182,7 @@
     \item
     annan Tartu Ülikoolile tasuta loa (lihtlitsentsi) minu loodud teose
     \par
-    \textbf{\@title}, %title of thesis
+    \enquote{\textbf{\@title}}, %title of thesis
     \par
     mille juhendaja(d) on \@supervisor, %supervisor's name(s)
     \par
