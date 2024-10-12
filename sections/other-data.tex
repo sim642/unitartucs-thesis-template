@@ -40,19 +40,6 @@ Aligning:
 \end{align*}
 Hint: Variables or equations in text are separated with \$ sign, e.g. $a$, $x - y$.
 
-\paragraph{Inference Rules}
-\[
-	\inference[addition]{x : T & y : T}{x + y : T}
-\]
-Bigger example:
-\[
-\inference[assign]{c := a + b &
-	\inference[addG]{a : \typeRat &
-		\inference[var]{b : \typeInt & \typeInt \subseteq \typeRat}{b : \typeRat}
-		}{a + b : \typeRat}
-	}{c : \typeRat}
-\]
-
 
 \subsection{algorithm2e}
 
