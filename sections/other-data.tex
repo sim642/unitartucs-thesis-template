@@ -43,7 +43,7 @@ Hint: Variables or equations in text are separated with \$ sign, e.g. $a$, $x - 
 \subsection{Pseudocode}
 
 \begin{figure} [htb]
-\begin{lstlisting}
+\begin{minted}{antlr}
 expression
   : NUMBER
   | VARIABLE
@@ -52,8 +52,8 @@ expression
   | expression '*' expression
   | function_name '(' parameters ')'
   | '(' expression ')'
-\end{lstlisting}
-\caption{Grammar of arithmetic expressions.}
+\end{minted}
+\caption{ANTLR grammar of arithmetic expressions.}
 \label{fig:parser_exp}
 \end{figure}
 
