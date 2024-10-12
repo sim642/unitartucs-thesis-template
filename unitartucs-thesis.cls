@@ -147,13 +147,11 @@
 \newenvironment{info}{\begin{@info}{\@title}}{\end{@info}}
 \newenvironment{otherinfo}[2]{\begin{otherlanguage}{#1}\begin{@info}{#2}}{\end{@info}\end{otherlanguage}}
 
-\newcommand{\licencehint}[2]{\\\hspace*{#1}\textsl(#2)\par} % TODO: fix \textsl only applying to (? or remove \licencehint altogether?
 % babel's \addto doesn't take \long argument, so put use intermediate macro
 \newcommand*{\licencetext@english}{
     \subsection*{Non-exclusive licence to reproduce thesis and make thesis public}
 
     I, \textbf{\@author}, %author's name
-    \licencehint{10mm}{author's name}
 
     \begin{enumerate}
     \item
@@ -162,10 +160,8 @@
     reproduce, for the purpose of preservation, including for adding to the DSpace digital archives until the expiry of the term of copyright,
     \par
     \textbf{\@title}, %
-    \licencehint{10mm}{title of thesis}
     \par
     supervised by \@supervisor. %supervisor's name
-    \licencehint{10mm}{supervisor's name}
     \item
     I grant the University of Tartu a permit to make the work specified in p. 1 available to the public via the web environment of the University of Tartu, including via the DSpace digital archives, under the Creative Commons licence CC BY NC ND 3.0, which allows, by giving appropriate credit to the author, to reproduce, distribute the work and communicate it to the public and prohibits the creation of derivative works and any commercial use of the work until the expiry of the term of copyright.
     \item
@@ -182,17 +178,14 @@
     \subsection*{Lihtlitsents lõputöö reprodutseerimiseks ja üldsusele kättesaadavaks tegemiseks}
 
     Mina, \textbf{\@author}, %author's name
-    \licencehint{10mm}{autori nimi}
 
     \begin{enumerate}
     \item
     annan Tartu Ülikoolile tasuta loa (lihtlitsentsi) minu loodud teose
     \par
     \textbf{\@title}, %title of thesis
-        \licencehint{10mm}{lõputöö pealkiri}
     \par
     mille juhendaja(d) on \@supervisor, %supervisor's name(s)
-    \licencehint{10mm}{juhendaja nimi}
     \par
     reprodutseerimiseks eesmärgiga seda säilitada, sealhulgas lisada digitaalarhiivi DSpace kuni autoriõiguse kehtivuse lõppemiseni.
     \par
