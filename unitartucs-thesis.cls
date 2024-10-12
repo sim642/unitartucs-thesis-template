@@ -156,7 +156,6 @@
     \begin{enumerate}
     \item
     herewith grant the University of Tartu a free permit (non-exclusive licence) to
-    \par
     reproduce, for the purpose of preservation, including for adding to the DSpace digital archives until the expiry of the term of copyright,
     \par
     \textbf{\@title}, %
