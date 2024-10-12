@@ -13,7 +13,7 @@
 
 \ProcessOptions* % process options in order for correct language order for babel
 
-\RequirePackage[a4paper]{geometry}
+\RequirePackage[a4paper,marginparwidth=2.5cm]{geometry}
 
 % Typeset text in Times Roman instead of Computer Modern (EC)
 \RequirePackage{times} % TODO: replace with non-deprecated package
