@@ -40,32 +40,6 @@ Aligning:
 \end{align*}
 Hint: Variables or equations in text are separated with \$ sign, e.g. $a$, $x - y$.
 
-
-\subsection{algorithm2e}
-
-\begin{algorithm} [!h]
-	\caption{typeChecking} \label{alg:typeChecking}
-	\KwIn{Abstract syntax tree}
-	\KwResult{Type checking result; In addition, type table \typeF{type\_G} for global variables, \typeF{game} for the main game and \typeF{fun} for each $fun \in F$}
-	\SetKwData{s}{s}
-	\BlankLine
-
-	\While{something changed in last cycle}{
-		\lForEach{global statement \s} {
-			\parseStatement{\s, \typeF{type\_G}}\;
-		}
-		\ForEach{function $fun$} {
-		\lForEach{statement \s in $fun$} {
-			\parseStatement{\s, \typeF{fun}}\;
-		}
-		}
-		\lForEach{statement \s in game} {
-			\parseStatement{\s, \typeF{game}}\;
-		}
-	}
-	%\eIf{error messages were found}{\Return \False\;}{\Return \True\;}
-\end{algorithm}
-
 \subsection{Pseudocode}
 
 \begin{figure} [htb]

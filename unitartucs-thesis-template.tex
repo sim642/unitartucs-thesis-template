@@ -75,18 +75,6 @@
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 
 
-% Standard package for drawing algorithms
-\usepackage[ruled, vlined, linesnumbered]{algorithm2e}
-
-% Fix a  set of keywords which you use inside algorithms
-\SetKw{True}{true}
-\SetKw{False}{false}
-\SetKwData{typeInt}{Int}
-\SetKwData{typeRat}{Rat}
-\SetKwData{Defined}{Defined}
-\SetKwFunction{parseStatement}{parseStatement}
-
-
 % Nice todo notes
 \usepackage{todonotes}
 
@@ -139,6 +127,7 @@
 % Macros that make sure that the math mode is set
 \newcommand{\typeF}[1] {\ensuremath{\mathsf{type_{#1}}}\xspace}
 \newcommand{\opDiv}{\ensuremath{\backslash \mathsf{div}}\xspace}
+\newcommand{\typeInt}{\ensuremath{\mathsf{Int}}\xspace}
 
 % Nice Todo box
 \setlength{\marginparwidth}{2cm}
