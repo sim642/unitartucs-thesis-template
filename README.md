@@ -14,4 +14,8 @@
 % Please use references like this:
 % <text> <non-breaking-space> <cite/ref-command> <punctuation>
 % This is an example~\cite{example}.
+
+% Use package babel for English or Estonian
+% If you use Estonian make sure that Estonian hyphenation is installed
+% - hypen-estonian or eehyp packages
 ```
