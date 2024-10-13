@@ -48,6 +48,7 @@
     \renewcommand{\supervisorsname}{Supervisor(s)}
     \renewcommand{\infoname}{Info page}
     \renewcommand{\keywordsname}{Keywords}
+    \renewcommand{\refname}{List of References}%
     \renewcommand{\appendixname}{Appendix}%
     \renewcommand{\appendixtocname}{Appendix}% TODO: why changed from Appendices?
     \renewcommand{\appendixpagename}{Appendix}% TODO: why changed from Appendices?
