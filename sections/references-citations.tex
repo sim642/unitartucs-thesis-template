@@ -1,22 +1,25 @@
+\section{Using References and Citations}
+\label{sec:refs-cites}
 
-
-
-
-
-\subsection{How to use references} \label{sec:using_ref}
-
-\paragraph{Cross-references to figures, tables, and other document elements.}
-LaTeX  internally numbers all kinds of objects that have sequence numbers:
+\subsection{Using References}
+LaTeX automatically numbers all kinds of objects, for example:
 \begin{itemize}
-\item chapters, sections, subsections;
-\item figures, tables, algorithms;
-\item equations, equation arrays.
+    \item sections, subsections, subsubsections;
+    \item figures, tables, subfigures, subtables;
+    \item equations.
 \end{itemize}
-To reference them automatically, you have to generate a label using \texttt{$\backslash$label\{some-name\}} just after the object that has the number inside. Usually, labels of different objects are split into different namespaces by adding a dedicated prefix, such as \texttt{sec:}, \texttt{fig:}. To use the corresponding reference, you must use command \texttt{$\backslash$ref} or \texttt{$\backslash$eqref}. For instance, we can reference this subsection by calling Section~\ref{sec:using_ref}. Note that there should be a nonbreakable space \texttt{\~} between the name of the object and the reference so that they would not appear on different lines (does not work in Estonian).
+To be able to reference them, you must add a label using \verb|\label{some-name}| just after the numbered object.
+Usually, labels for different kinds of objects use corresponding prefixes, for example, \verb|sec:| for sections, \verb|fig:| for figures, \verb|tab:| for tables, \verb|eq:| for equations.
+
+To reference an object by its label, use \verb|\ref{some-name}|.
+For example, Section~\ref{sec:refs-cites}, Section~\ref{sec:cites}, Figure~\ref{fig:aritmOp_revisit}, Table~\ref{tab:statements}, Figure~\ref{fig:graph}.
+To reference equations, use \verb|\eqref{some-name}| instead, for example Equation~\eqref{eq:abcd}.
+There should be a \emph{nonbreakable space} \verb|~| between the name of the object and the reference command so that they would not appear on different lines.
 
 
+\subsection{Using Citations.}
+\label{sec:cites}
 
-\paragraph{Citations.}
 Usually, you also want to reference articles, webpages, tools or programs, or books. For that, you should use citations and references. The system is similar to the cross-referencing system in LaTeX. For each reference, you must assign a unique label. Again, there are many naming schemes for labels. However, as you have a short document, anything works. To reference to a particular source you must use \texttt{$\backslash$cite\{label\}} or \texttt{$\backslash$cite[page]\{label\}}.
 
 References themselves can be part of a LaTeX source file. For that, you need to define a bibliography section. However, this approach is really uncommon. It is much easier to use BibTeX to synthesise the right reference form for you. For that, you must use two commands in the LaTeX source:
