@@ -6,18 +6,13 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
-% If you have problems with Estonian keywords in the bibliography
-% \usepackage{biblatex}
-%\usepackage[backend=biber]{biblatex}
-\usepackage[style=unitartucs-alphabetic]{biblatex}
-% \usepackage[style=unitartucs-numeric]{biblatex}
-%% plain --> \usepackage[style=numeric]{biblatex}
-%% abbrv --> \usepackage[style=numeric,firstinits=true]{biblatex}
-%% unsrt --> \usepackage[style=numeric,sorting=none]{biblatex}
-%% alpha --> \usepackage[style=alphabetic]{biblatex}
+% Bibliography with BibLaTeX
+% TODO: Choose citation and bibliography style.
+\usepackage[style=unitartucs-numeric]{biblatex} % Numeric citations [1], alphabetically sorted bibliography.
+% \usepackage[style=unitartucs-numeric,sorting=none]{biblatex} % Numeric citations [1], bibliography in citation order.
+% \usepackage[style=unitartucs-alphabetic]{biblatex} % Alphabetic citations [ABC], alphabetically sorted bibliography.
 %\DefineBibliographyStrings{estonian}{and={ja}}
 \addbibresource{unitartucs-thesis.bib}
-%plain=[1], alpha=[BGZ09]
 
 
 % General packages for math in general, theorems and symbols
