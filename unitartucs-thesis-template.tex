@@ -81,6 +81,7 @@
 % \date{2023-01-02}
 
 
+\appto\biburlsetup{\Urlmuskip=0mu\relax} % https://tex.stackexchange.com/a/291857
 \begin{document}
 
 \maketitle % Title page
@@ -103,6 +104,7 @@
 
 % Bibliography
 \clearpage % Flush all floats (figures and tables) before bibliography and start new page.
+\nocite{*}
 \printbibliography[heading=bibintoc] % Bibliography with heading also in Table of Contents.
 
 % Appendices

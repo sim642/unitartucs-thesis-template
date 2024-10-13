@@ -247,7 +247,7 @@
 \AtEndPreamble{ % workaround to avoid hyperref option clash
     % Packages for getting clickable links in PDF file
     %\usepackage{hyperref}
-    \usepackage[hidelinks,pdfusetitle]{hyperref} %hide red (blue,green) boxes around links
+    \usepackage[hidelinks,pdfusetitle,breaklinks]{hyperref} %hide red (blue,green) boxes around links
     \usepackage[numbered,open]{bookmark} % need bookmark for \bookmarksetupnext
 }
 
