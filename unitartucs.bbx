@@ -1,0 +1,20 @@
+\ProvidesFile{unitartucs.bbx}
+[\abx@bbxid]
+
+\ExecuteBibliographyOptions{giveninits=true} % given name initials only
+\ExecuteBibliographyOptions{doi=false,isbn=false} % no DOI, ISBN
+% \ExecuteBibliographyOptions{maxbibnames=5,maxcitenames=2}
+\ExecuteBibliographyOptions{maxbibnames=99,maxcitenames=2} % all names in bibliography
+
+\DeclareNameAlias{default}{family-given} % family name before given name
+\renewcommand*{\revsdnamepunct}{} % no comma after family name - https://tex.stackexchange.com/a/17593
+
+\DeclareFieldFormat*{title}{#1} % no quotes around title
+
+\renewbibmacro*{in:}{} % no In: prefix, estonian overrides this badly... requires workaround
+
+\DeclareFieldFormat{url}{\url{#1}} % no URL: prefix
+\DeclareFieldFormat{urldate}{\mkbibparens{#1}} % no urldate prefix word
+
+
+\endinput
