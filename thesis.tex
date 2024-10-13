@@ -6,37 +6,35 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
-% Bibliography with BibLaTeX
+% Bibliography with BibLaTeX.
 % TODO: Choose citation and bibliography style.
 \usepackage[style=unitartucs-numeric]{biblatex} % Numeric citations [1], alphabetically sorted bibliography.
 % \usepackage[style=unitartucs-numeric,sorting=none]{biblatex} % Numeric citations [1], bibliography in citation order.
 % \usepackage[style=unitartucs-alphabetic]{biblatex} % Alphabetic citations [ABC], alphabetically sorted bibliography.
-\DeclareLanguageMapping{english}{unitartucs-english}
-\DeclareLanguageMapping{estonian}{unitartucs-estonian}
-\addbibresource{thesis.bib}
 
+\DeclareLanguageMapping{english}{unitartucs-english} % Language overrides for english.
+\DeclareLanguageMapping{estonian}{unitartucs-estonian} % Language overrides for estonian.
+\addbibresource{thesis.bib} % Bibliography file itself.
 
-% General packages for math in general, theorems and symbols
-% Read ftp://ftp.ams.org/ams/doc/amsmath/short-math-guide.pdf for further information
+% Packages for math.
 \usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{amssymb}
+\usepackage{amssymb} % Package for additional math symbols.
+\usepackage{amsthm} % Package for theorems, definitions, etc.
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem} % TODO: Translate to Teoreem if thesis is in Estonian.
+\theoremstyle{definition}
+\newtheorem{definition}{Definition} % TODO: Translate to Definitsioon if thesis is in Estonian.
 
-% Including graphical images and setting the figure directory
+% Package for graphics/images.
 \usepackage{graphicx}
-\graphicspath{{figures/}}
+\graphicspath{{figures/}} % Directory of graphics.
 
-\usepackage{booktabs}
-\usepackage{subcaption}
+\usepackage{booktabs} % Package for nice and professional tables (\toprule, \midrule, \bottomrule).
+\usepackage{subcaption} % Package for subfigures and subtables.
 
+% Package for source code.
 \usepackage{minted}
-\setminted{
-	autogobble
-}
-
-% If you really want to draw figures in LaTeX use packages tikz or pstricks
-% However, getting a corresponding illustrations is really painful
-
+\setminted{autogobble} % Trim common leading whitespace from code.
 
 \usepackage{xspace} % Non-eatable spaces in macros
 % Define your favorite macros that you use inside the thesis
@@ -47,10 +45,6 @@
 \newcommand{\typeF}[1] {\ensuremath{\mathsf{type_{#1}}}\xspace}
 \newcommand{\opDiv}{\ensuremath{\backslash \mathsf{div}}\xspace}
 \newcommand{\typeInt}{\ensuremath{\mathsf{Int}}\xspace}
-
-% A way to define theorems and lemmata
-\newtheorem{theorem}{Theorem}
-
 
 % Package for TODO notes with \todo command.
 \usepackage{todonotes}
