@@ -2,7 +2,7 @@
 [\abx@bbxid]
 
 \ExecuteBibliographyOptions{giveninits=true} % given name initials only
-\ExecuteBibliographyOptions{doi=false,isbn=false} % no DOI, ISBN
+\ExecuteBibliographyOptions{doi=true,isbn=false} % no DOI, ISBN
 % \ExecuteBibliographyOptions{maxbibnames=5,maxcitenames=2}
 \ExecuteBibliographyOptions{maxbibnames=99,maxcitenames=2} % all names in bibliography
 \ExecuteBibliographyOptions{autolang=other}
@@ -14,6 +14,7 @@
 
 \renewbibmacro*{in:}{} % no In: prefix, estonian overrides this badly... requires workaround
 
+% \DeclareFieldFormat{doi}{\href{https://doi.org/#1}{\nolinkurl{#1}}} % no DOI: prefix
 \DeclareFieldFormat{url}{\url{#1}} % no URL: prefix
 \DeclareFieldFormat{urldate}{\mkbibparens{#1}} % no urldate prefix word
 
