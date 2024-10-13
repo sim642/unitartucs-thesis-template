@@ -39,19 +39,22 @@
 % Print a dot instead of colon in table or figure captions
 \RequirePackage[labelsep=period]{caption}
 
-\newcommand{\supervisorsname}{Supervisor(s)}
+\newcommand{\supervisorname}{Supervisor}
+\newcommand{\supervisorsname}{Supervisors}
 \newcommand{\infoname}{Info page}
 \newcommand{\keywordsname}{Keywords}
 
 % Change Babel document elements
 \addto\captionsenglish{%
-    \renewcommand{\supervisorsname}{Supervisor(s)}
+    \renewcommand{\supervisorname}{Supervisor}
+    \renewcommand{\supervisorsname}{Supervisors}
     \renewcommand{\infoname}{Info page}
     \renewcommand{\keywordsname}{Keywords}
     \renewcommand{\refname}{List of References}%
 }
 \addto\captionsestonian{%
-    \renewcommand{\supervisorsname}{Juhendaja(d)}
+    \renewcommand{\supervisorname}{Juhendaja}
+    \renewcommand{\supervisorsname}{Juhendajad}
     \renewcommand{\infoname}{Infoleht}
     \renewcommand{\abstractname}{Lühikokkuvõte}
     \renewcommand{\keywordsname}{Võtmesõnad}
@@ -78,6 +81,7 @@
 \newcounter{@supervisors}
 
 \renewcommand*{\maketitle}{
+    \setbox0=\vbox{\setcounter{@supervisors}{1}\newcommand*{\degree}[1]{}\renewcommand*{\and}{\stepcounter{@supervisors}}\@supervisor}%
     \thispagestyle{empty}
     \begin{center}
 
@@ -117,7 +121,7 @@
     \renewcommand*{\and}{\\ & \sffamily}
     \newcommand*{\degree}[1]{, ##1}
     \begin{tabular}{r l}
-    \sffamily \supervisorsname: & \sffamily \@supervisor
+    \sffamily \ifnum\value{@supervisors}>1\supervisorsname\else\supervisorname\fi: & \sffamily \@supervisor
     \end{tabular}
     }
     \end{flushright}
@@ -194,7 +198,7 @@
     \par
     \enquote{\textbf{\@title}}, %title of thesis
     \par
-    mille juhendaja(d) on \@supervisor, %supervisor's name(s)
+    mille \MakeLowercase{\ifnum\value{@supervisors}>1\supervisorsname\else\supervisorname\fi} on \@supervisor, %supervisor's name(s)
     \par
     reprodutseerimiseks eesmärgiga seda säilitada, sealhulgas lisada digitaalarhiivi DSpace kuni autoriõiguse kehtivuse lõppemiseni.
     \par
