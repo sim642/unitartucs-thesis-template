@@ -32,9 +32,6 @@
 \usepackage{booktabs}
 \usepackage{subcaption}
 
-% Nice todo notes
-\usepackage{todonotes}
-
 \usepackage{minted}
 \setminted{
 	autogobble
@@ -54,11 +51,13 @@
 \newcommand{\opDiv}{\ensuremath{\backslash \mathsf{div}}\xspace}
 \newcommand{\typeInt}{\ensuremath{\mathsf{Int}}\xspace}
 
-% Nice Todo box
-\newcommand{\TODO}{\todo[inline]}
-
 % A way to define theorems and lemmata
 \newtheorem{theorem}{Theorem}
+
+
+% Package for TODO notes with \todo command.
+\usepackage{todonotes}
+\newcommand{\TODO}{\todo[inline]} % Custom command for inline TODOs.
 
 
 % TODO: Fill in title and author name.
@@ -92,9 +91,9 @@
 \pdfbookmark[section]{\contentsname}{toc} % Add Table of Contents to PDF bookmarks (for convenience), but not to Table of Contents itself.
 \tableofcontents
 
-% Remember to remove this from the final thesis version
-\newpage
-\listoftodos[Unsolved issues]
+% TODO: Uncomment if you want a list of remaining TODOs. Remove from final version!
+% \newpage
+% \listoftodos
 
 \input{sections/introduction}
 \input{sections/section2}
