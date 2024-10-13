@@ -2,151 +2,136 @@
 
 \subsection{Figures}
 
-Here are a few examples of how to add figures or pictures to your thesis (see Figures~\ref{fig:fnCompModel}, \ref{fig:game-based_proofs}, \ref{fig:proveit_screenshot}).
+See Figures~\ref{fig:fnCompModel}, \ref{fig:game-based_proofs} and \ref{fig:proveit_screenshot} for examples of including graphics/images as figures.
+\TODO{Rule: Figures have captions below.}
+\TODO{Rule: All the figures and tables must be referred to somewhere in the text.}
 
-Rule: All the figures, tables and extras in the thesis have to be referred to somewhere in the text.
-
-
-\begin{figure} [ht] %try to place the figure here (next option top of the page)
-\begin{center}
-\includegraphics[width=0.8\textwidth]{computational_model_function}
-\caption{The title of the Figure.}
-\label{fig:fnCompModel}
-\end{center}
+\begin{figure}[h] % Preferrably place figure here, not at the top/bottom of a page.
+    \centering
+    \includegraphics[width=0.8\textwidth]{computational_model_function}
+    \caption{Caption for the figure.}
+    \label{fig:fnCompModel}
 \end{figure}
 
-
-
-\begin{figure} [!ht] %if [h] doesn't work, we can force with !
-\begin{center}
-\includegraphics[width=\textwidth]{game-based_proofs}
-\caption{Refer if the figure is not yours~\cite{kamm12}.}
-\label{fig:game-based_proofs}
-\end{center}
+\begin{figure}[h] % Preferrably place figure here, not at the top/bottom of a page.
+    \centering
+    \includegraphics[width=\textwidth]{game-based_proofs}
+    \caption{Cite if the figure is not yours~\cite{kamm12}.}
+    \label{fig:game-based_proofs}
 \end{figure}
 
-
-\begin{figure} [p]
-\begin{center}
-\includegraphics[width=\textwidth]{proveit_screenshot}
-\caption{Screenshot of \proveit.}
-\label{fig:proveit_screenshot}
-\end{center}
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{proveit_screenshot}
+    \caption{Screenshot of \proveit.}
+    \label{fig:proveit_screenshot}
 \end{figure}
 
-Tip: If you add a screenshot, then labeling the parts might help make the text more understandable (panel C vs bottom left part), e.g.
+Tip: If you add a screenshot, then labeling the parts might help make the text more understandable (panel C vs bottom right part). For example:
+A screenshot of \proveit can be seen in Figure~\ref{fig:proveit_screenshot}.
+The user first enters the pseudocode of the initial game in panel~B.
+\proveit also keeps track of all the previous games showing the progress on a graph shown in panel~A.
 
-
-\begin{figure} [htbp]
-  \centering
-\begin{subfigure}[c]{0.45\textwidth}
-\includegraphics[width=\textwidth]{LCA_2_solutions}
-\caption{Example graph.}
-\label{fig:graph}
-\end{subfigure}
-\hfil
-% TODO: mixing subfigure and subtable in figure is odd
-\begin{subtable}[c]{0.3\textwidth}
-\centering
-\caption{Descendants per node.}
-\begin{tabular}{cl}
-  \toprule
-	Node & Decendants \\
-  \midrule
-  1 & 2, 3, 4 \\
-  2 & 3, 4 \\
-  3 & \\
-  4 & \\
-  5 & 3, 4, 6, 7 \\
-  6 & 4 \\
-  7 & 3 \\
-  8 & 3, 4, 5, 6, 7\\
-  9 & 3, 4, 5, 6, 7\\
-  \bottomrule
-\end{tabular}
-\end{subtable}
-%
-\caption{Example how to put two figures parallel to each other.}
-\label{fig:LCA_2_solutions}
+\begin{figure}
+    \centering
+    \begin{subfigure}[c]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{LCA_2_solutions}
+        \caption{Example graph.}
+        \label{fig:graph}
+    \end{subfigure}
+    \hfil % Add horizontal space between subfigures.
+    \begin{subtable}[c]{0.3\textwidth}
+        \centering
+        \caption{Descendants per node.}
+        \begin{tabular}{cl}
+            \toprule
+            Node & Decendants \\
+            \midrule
+            1 & 2, 3, 4 \\
+            2 & 3, 4 \\
+            3 & \\
+            4 & \\
+            5 & 3, 4, 6, 7 \\
+            6 & 4 \\
+            7 & 3 \\
+            8 & 3, 4, 5, 6, 7\\
+            9 & 3, 4, 5, 6, 7\\
+            \bottomrule
+        \end{tabular}
+    \end{subtable}
+    \caption{Example how to put two figures parallel to each other.}
+    \label{fig:LCA_2_solutions}
 \end{figure}
 
-
-Example: A screenshot of \proveit can be seen in Figure~\ref{fig:proveit_screenshot}. The user first enters the pseudocode of the initial game in panel B. \proveit also keeps track of all the previous games showing the progress on a graph seen in panel A.
-
-There are two figures side by side in Figure~\ref{fig:LCA_2_solutions}.
+You can also use subfigures and subtables like in Figure~\ref{fig:LCA_2_solutions}.\footnote{Although you should avoid mixing subfigures and subtables like that.}
 
 
 \subsection{Tables}
 
-\begin{table}[h]
-\centering
-\caption{Statements in the \proveit language.}
-\begin{tabular}{ll}
-	\toprule
-	Statement & Typeset Example \\
-	\midrule
-	assignment & $a := 5 + b$ \\
-	uniform choice & $m \gets M$ \\
-	function signature & $f : K \times M \to L$ \\
-	\bottomrule
-\end{tabular}
-\label{tab:statements}
+See Table~\ref{tab:statements} for an example of a nice and professional table that does not use vertical rules.
+\TODO{Rule: Tables have captions above.}
+
+\begin{table}
+    \centering
+    \caption{Statements in the \proveit language.}
+    \label{tab:statements}
+    \begin{tabular}{ll}
+        \toprule
+        Statement & Typeset Example \\
+        \midrule
+        assignment & $a := 5 + b$ \\
+        uniform choice & $m \gets M$ \\
+        function signature & $f : K \times M \to L$ \\
+        \bottomrule
+    \end{tabular}
 \end{table}
 
 
 \subsection{Lists}
 
-Numbered list example:
+Example of a numbered list:
 \begin{enumerate}
-	\item item one;
-	\item item two;
-	\item item three.
+    \item item one;
+    \item item two;
+    \item item three.
 \end{enumerate}
 
-\subsection{Math mode}
-Example:
+
+\subsection{Math}
+
+Variables or equations in text are surrounded by \verb|$| signs, e.g., $a$ and $x - y$.
+This is a display equation:
+\[
+    x^2 + y^2 = z^2.
+\]
+This is a numbered equation:
 \begin{equation}
-a + b = c + d
-\label{eq:abcd}
+    a + b = c + d.
+    \label{eq:abcd}
 \end{equation}
-Aligning:
-\begin{align*}
-	a &= 5 \\
-	b + c &= a \\
-	a -2*3 &= 5/4
+Multiple equations can be aligned like this:
+\begin{align*} % The * means they are not numbered.
+    a &= 5 \\
+    b + c &= a \\
+    a - 2 \cdot 3 &= \frac{5}{4}
 \end{align*}
-Hint: Variables or equations in text are separated with \$ sign, e.g. $a$, $x - y$.
 
-\subsection{Pseudocode}
 
-\begin{figure} [htb]
-\begin{minted}{antlr}
-expression
-  : NUMBER
-  | VARIABLE
-  | '+' expression
-  | expression '+' expression
-  | expression '*' expression
-  | function_name '(' parameters ')'
-  | '(' expression ')'
-\end{minted}
-\caption{ANTLR grammar of arithmetic expressions.}
-\label{fig:parser_exp}
+\subsection{Source code}
+
+You can use the modern minted package to add highlighted source code like in Figure~\ref{fig:parser_exp}.
+
+\begin{figure}
+    \begin{minted}{antlr}
+        expression
+        : NUMBER
+        | VARIABLE
+        | '+' expression
+        | expression '+' expression
+        | expression '*' expression
+        | function_name '(' parameters ')'
+        | '(' expression ')'
+    \end{minted}
+    \caption{ANTLR grammar of arithmetic expressions.}
+    \label{fig:parser_exp}
 \end{figure}
-
-\subsection{Frame Around Information}
-
-Tip: We can use minipage to create a frame around some important information.
-\begin{figure} [h]
-\frame{
-\begin{minipage}{\textwidth}
-\begin{enumerate}
-	\item integer division ($\backslash\mathsf{div}$) -- only usable between $\mathsf{Int}$ types
-	\item remainder ($\%$) -- only usable between $\mathsf{Int}$ types
-\end{enumerate}
-\end{minipage}
-}
-\caption{Arithmetic operations in \proveit revisited.}
-\label{fig:aritmOp_revisit}
-\end{figure}
-
