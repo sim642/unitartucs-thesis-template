@@ -8,26 +8,29 @@ LaTeX automatically numbers all kinds of objects, for example:
     \item figures, tables, subfigures, subtables;
     \item equations.
 \end{itemize}
-To be able to reference them, you must add a label using \verb|\label{some-name}| just after the numbered object.
+To be able to reference them, you must add a \emph{label} using \verb|\label{some-label}| just after the numbered object.
 Usually, labels for different kinds of objects use corresponding prefixes, for example, \verb|sec:| for sections, \verb|fig:| for figures, \verb|tab:| for tables, \verb|eq:| for equations.
 
-To reference an object by its label, use \verb|\ref{some-name}|.
+To reference an object by its label, use \verb|\ref{some-label}|.
 For example, Section~\ref{sec:refs-cites}, Section~\ref{sec:cites}, Figure~\ref{fig:aritmOp_revisit}, Table~\ref{tab:statements}, Figure~\ref{fig:graph}.
-To reference equations, use \verb|\eqref{some-name}| instead, for example Equation~\eqref{eq:abcd}.
-There should be a \emph{nonbreakable space} \verb|~| between the name of the object and the reference command so that they would not appear on different lines.
+To reference equations, use \verb|\eqref{some-label}| instead, for example Equation~\eqref{eq:abcd}.
+There should be a \emph{non-breaking space} \verb|~| between the name of the object and the reference command so that they would not appear on different lines.
 
 
-\subsection{Using Citations.}
+\subsection{Using Citations}
 \label{sec:cites}
 
-Usually, you also want to reference articles, webpages, tools or programs, or books. For that, you should use citations and references. The system is similar to the cross-referencing system in LaTeX. For each reference, you must assign a unique label. Again, there are many naming schemes for labels. However, as you have a short document, anything works. To reference to a particular source you must use \texttt{$\backslash$cite\{label\}} or \texttt{$\backslash$cite[page]\{label\}}.
+To be able to cite sources (like articles, books, websites) you must add them to the \verb|thesis.bib| file in BibTeX format.
+In addition to defining fields like \verb|author| and \verb|title|, each entry also has a unique \emph{key}.
+Most publishers (like Springer, ACM) and databases (like DBLP, Google Scholar) offer export for BibTeX entries that can be copied into the bibliography file.
+You can manage the bibliography file directly or use a frontend like JabRef\footnote{\url{http://jabref.sourceforge.net/}}.
 
-References themselves can be part of a LaTeX source file. For that, you need to define a bibliography section. However, this approach is really uncommon. It is much easier to use BibTeX to synthesise the right reference form for you. For that, you must use two commands in the LaTeX source:
-\begin{itemize}
-\item $\backslash$bibliographystyle\{alpha\} or $\backslash$bibliographystyle\{plain\}
-\item $\backslash$bibliography\{file-name\}
-\end{itemize}
-The first command determines whether the references are numbered by letter-number combinations or by cryptic numbers. It is more common to use \texttt{alpha} style. The second command determines the file containing the bibliographic entries. The file should end with \texttt{bib} extension. Each reference there is in a specific form. The simplest way to avoid all technicalities is to use graphical frontend  Jabref (\url{http://jabref.sourceforge.net/}) to manage references. Another alternative is to use the DBLP database of references and copy BibTeX entries directly from there.
+To cite a source, use \verb|\cite{some-key}| or \verb|\cite[page]{some-key}|, also prefixed with a non-breaking space \verb|~|.
+For example, see the following sentences.
+Game-based proving is a way to analyse the security of a cryptographic protocol~\cite{GameB_1,GameB_2}.
+There are automatic provers, such as CertiCrypt~\cite{certiCrypt} and ProVerif~\cite{proVerif}.
+To use a citation as the subject, use \verb|\textcite{some-key}|.
+For example, \textcite{certiCrypt} have developed CertiCrypt.
 
-
-The following paragraph shows how references can be used. Game-based proving is a way to analyse the security of a cryptographic protocol~\cite{GameB_1, GameB_2}. There are automatic provers, such as {CertiCrypt\-}~\cite{certiCrypt} and ProVerif~\cite{proVerif}.
+BibLaTeX takes care of the rest automatically: it numbers/names bibliography entries for citations and produces a matching bibliography section with only cited entries.
+See TODOs in \verb|thesis.tex| to change the citation and bibliography style (numeric or alphabetic).
