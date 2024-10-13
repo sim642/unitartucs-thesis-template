@@ -1,5 +1,6 @@
-\section{How to add figures and pictures to your thesis}
+\section{Representing Data}
 
+\subsection{Figures}
 
 Here are a few examples of how to add figures or pictures to your thesis (see Figures~\ref{fig:fnCompModel}, \ref{fig:game-based_proofs}, \ref{fig:proveit_screenshot}).
 
@@ -73,3 +74,79 @@ Tip: If you add a screenshot, then labeling the parts might help make the text m
 Example: A screenshot of \proveit can be seen in Figure~\ref{fig:proveit_screenshot}. The user first enters the pseudocode of the initial game in panel B. \proveit also keeps track of all the previous games showing the progress on a graph seen in panel A.
 
 There are two figures side by side in Figure~\ref{fig:LCA_2_solutions}.
+
+
+\subsection{Tables}
+
+\begin{table}[h]
+\centering
+\caption{Statements in the \proveit language.}
+\begin{tabular}{ll}
+	\toprule
+	Statement & Typeset Example \\
+	\midrule
+	assignment & $a := 5 + b$ \\
+	uniform choice & $m \gets M$ \\
+	function signature & $f : K \times M \to L$ \\
+	\bottomrule
+\end{tabular}
+\label{tab:statements}
+\end{table}
+
+
+\subsection{Lists}
+
+Numbered list example:
+\begin{enumerate}
+	\item item one;
+	\item item two;
+	\item item three.
+\end{enumerate}
+
+\subsection{Math mode}
+Example:
+\begin{equation}
+a + b = c + d
+\label{eq:abcd}
+\end{equation}
+Aligning:
+\begin{align*}
+	a &= 5 \\
+	b + c &= a \\
+	a -2*3 &= 5/4
+\end{align*}
+Hint: Variables or equations in text are separated with \$ sign, e.g. $a$, $x - y$.
+
+\subsection{Pseudocode}
+
+\begin{figure} [htb]
+\begin{minted}{antlr}
+expression
+  : NUMBER
+  | VARIABLE
+  | '+' expression
+  | expression '+' expression
+  | expression '*' expression
+  | function_name '(' parameters ')'
+  | '(' expression ')'
+\end{minted}
+\caption{ANTLR grammar of arithmetic expressions.}
+\label{fig:parser_exp}
+\end{figure}
+
+\subsection{Frame Around Information}
+
+Tip: We can use minipage to create a frame around some important information.
+\begin{figure} [h]
+\frame{
+\begin{minipage}{\textwidth}
+\begin{enumerate}
+	\item integer division ($\backslash\mathsf{div}$) -- only usable between $\mathsf{Int}$ types
+	\item remainder ($\%$) -- only usable between $\mathsf{Int}$ types
+\end{enumerate}
+\end{minipage}
+}
+\caption{Arithmetic operations in \proveit revisited.}
+\label{fig:aritmOp_revisit}
+\end{figure}
+
