@@ -1,0 +1,13 @@
+\ProvidesFile{numeric-ut.cbx}
+[\abx@cbxid]
+
+\RequireCitationStyle{numeric-comp}
+
+% colon for page number in cite - https://tex.stackexchange.com/a/66395
+%\renewcommand*{\postnotedelim}{\addcolon\space}
+\renewcommand*{\postnotedelim}{\addcolon}
+
+\DeclareFieldFormat{postnote}{#1}
+\DeclareFieldFormat{multipostnote}{#1}
+
+\endinput
