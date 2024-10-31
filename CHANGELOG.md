@@ -9,17 +9,31 @@
 3. **Add environments and commands for typesetting the info page.**
    This ensures consistent formatting for both languages.
    If Estonian and English info do not fit on the same page, they will be automatically put on separate pages (as opposed to a random page break).
-5. Automatic appendix numbering, fix appendix number format.
-6. Sections in separate files.
-7. BibLaTeX instead of manual/BibTex citations. Consistent with thesis guide. Add examples from guide. Use DOIs.
-8. Automatic page breaks (with `\clearpage` between sections)
-9. Remove old packages (`hypcap`, `eucal`).
-10. Improve PDF bookmarks/contents, PDF metadata.
-11. Use modern packages (`booktabs`, `subcaption`)
-12. Remove obscure packages (inference rules (`proof`, `semantic`), `algorithm2e`)
-13. Use `minted` instead of `listings`.
-14. Improved instructions for template usage.
-15. Rewrite guide on references, citations, figures, etc to match changes.
+4. **Automate appendix section numbering.**
+   Also fixes appendix number format to _not_ use dot after Roman numerals.
+5. **Add BibLaTeX styles that match thesis guidelines.**
+   Examples from the guidelines are included as BibLaTeX entries.
+   Also allows DOIs to be used since they are now standard in academia.
+6. **Update used/suggested packages.**
+   1. **Replace `listings` with `minted`.**
+      `minted` is modern and has nice-looking output out-of-the-box, while `listings` looks ugly out-of-the-box.
+   2. **Add modern packages.**
+      1. `booktabs` for professional tables.
+      2. `subcaption` for subfigures/subtables (instead of using `minipage` environment manually).
+   3. **Remove unnecessary packages.**
+      1. `hypcap` functionality is already provided by `caption`.
+      2. `eucal` was commented out and unused.
+   4. **Remove less common optional packages.**
+      1. `proof` and `semantic` for inference rules.
+      2. `algorithm2e` for pseudocode.
+7. **Split sections into separate files.**
+   This is a good practice to suggest to students.
+   Also adds automatic page breaks (with `\clearpage`) between sections.
+8. **Improve PDF bookmarks/contents and metadata.**
+   This improves quick PDF navigation.
+9. **Adapt instructions for template changes.**
+   1. Improve instructions in `.tex` sources about template usage.
+   2. Rewrite placeholder section on references, citations, figures, etc.
 
 ### TODO
 - [ ] `newtxtext` instead of `times`
