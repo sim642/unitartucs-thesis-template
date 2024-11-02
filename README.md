@@ -31,6 +31,9 @@ Modernized (unofficial) LaTeX template for [bachelor's and master's thesis at Un
 ### Configuration
 
 The main file for the thesis is [`thesis.tex`](./thesis.tex) and (example) sections are in [`sections/`](./sections/).
+The bibliography is defined in [`thesis.bib`](./thesis.bib).
+All the `unitartucs*` files define the thesis style according to the institute's thesis guidelines and should not be changed.
+
 Follow the TODOs (prefixed with `% TODO:`) in [`thesis.tex`](./thesis.tex) and [`sections/info.tex`](./sections/info.tex) to configure the template:
 1. Choose thesis language.
 2. Fill in metadata (title, author, etc.).
