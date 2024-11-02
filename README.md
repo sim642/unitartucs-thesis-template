@@ -23,22 +23,11 @@
    1. Download the template as zip, or create a new GitHub repository with the template and clone it (described above).
    2. Compile with the following command line command: `latexmk -pdf thesis`
 
-```
-% Institute of Computer Science thesis template
-% authors: Sven Laur, Liina Kamm, Tõnu Tamme
-% last change Eero Vainikko <eero.vainikko@ut.ee> 14.09.2021
-%--
-% Compilation instructions:
-% 1. Choose main language on line 55-56 (English or Estonian)
-% 2. Compile 1-3 times to get refences right
-% pdflatex unitartucs-thesis-template
-% bibtex unitartucs-thesis-template
-%--
-% Please use references like this:
-% <text> <non-breaking-space> <cite/ref-command> <punctuation>
-% This is an example~\cite{example}.
 
-% Use package babel for English or Estonian
-% If you use Estonian make sure that Estonian hyphenation is installed
-% - hypen-estonian or eehyp packages
-```
+## About
+
+The original (unversioned) template was by Sven Laur, Liina Kamm, Tõnu Tamme, with the last change by Eero Vainikko on 2021-09-14.
+
+The template was modernized by Simmo Saan and is now version controlled on GitHub.
+Feel free to open issues on GitHub with problems and suggestions relating to the template.
+Pull requests with improvements are also welcome.
