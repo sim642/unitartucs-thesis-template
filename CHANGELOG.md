@@ -15,15 +15,18 @@
    Examples from the guidelines are included as BibLaTeX entries.
    Also allows DOIs to be used since they are now standard in academia.
 6. **Update used/suggested packages.**
-   1. **Replace `listings` with `minted`.**
+   1. **Replace `times` with `newtxtext`.**
+      `newtxtext` replaces the obsolete `mathptmx` which replaces the obsolete `times`.
+      `newtxtext` has improved readability and comes with correctly scaled Helvetica for `\textsf`.
+   2. **Replace `listings` with `minted`.**
       `minted` is modern and has nice-looking output out-of-the-box, while `listings` looks ugly out-of-the-box.
-   2. **Add modern packages.**
+   3. **Add modern packages.**
       1. `booktabs` for professional tables.
       2. `subcaption` for subfigures/subtables (instead of using `minipage` environment manually).
-   3. **Remove unnecessary packages.**
+   4. **Remove unnecessary packages.**
       1. `hypcap` functionality is already provided by `caption`.
       2. `eucal` was commented out and unused.
-   4. **Remove less common optional packages.**
+   5. **Remove less common optional packages.**
       1. `proof` and `semantic` for inference rules.
       2. `algorithm2e` for pseudocode.
 7. **Split sections into separate files.**
@@ -34,6 +37,3 @@
 9. **Adapt instructions for template changes.**
    1. Improve instructions in `.tex` sources about template usage.
    2. Rewrite placeholder section on references, citations, figures, etc.
-
-### TODO
-- [ ] `newtxtext` instead of `times`

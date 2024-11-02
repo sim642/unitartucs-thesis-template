@@ -15,15 +15,17 @@
 
 \RequirePackage[a4paper,marginparwidth=2.5cm]{geometry}
 
+% must load babel before newtxtext
+\RequirePackage{babel}
+\RequirePackage[style=ddmmyyyy]{datetime2}
+
 % Typeset text in Times Roman instead of Computer Modern (EC)
-\RequirePackage{times} % TODO: replace with non-deprecated package
+% TODO: should be loaded after amsthm
+\RequirePackage[defaultsups,largesc,trueslanted]{newtxtext} % defaultsups,largesc,trueslanted to match old times more closely
 
 % Suggested packages:
 \RequirePackage{microtype}  %towards typographic perfection...
 \RequirePackage{inconsolata} %nicer font for code listings. (Use \ttfamily for lstinline bastype)
-
-\RequirePackage{babel}
-\RequirePackage[style=ddmmyyyy]{datetime2}
 
 \AddToHook{package/inputenc/before}{ % TODO: what if inputenc not loaded?
     \usepackage{fvextra} % avoid warning
