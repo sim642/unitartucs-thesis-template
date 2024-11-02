@@ -1,3 +1,5 @@
+# 2024-11-02 v1.0
+
 1. **Create LaTeX document class to separate required formatting from thesis content.**
    Students can focus on the content like with any other document class, while the formatting technicalities they shouldn't be concerned with are out of sight.
 2. **Use standard (`\title`, `\author`, etc.) and custom (`\supervisor`, etc.) commands to define metadata.**

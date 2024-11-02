@@ -1,4 +1,4 @@
-\ProvidesClass{unitartucs-thesis}[2024-09-23 v0.1]
+\ProvidesClass{unitartucs-thesis}[2024-11-02 v1.0 University of Tartu Institute of Computer Science bachelor's or master's thesis document class]
 
 \LoadClass[12pt]{article}
 
