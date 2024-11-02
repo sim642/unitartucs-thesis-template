@@ -16,16 +16,21 @@ Modernized (unofficial) LaTeX template for [bachelor's and master's thesis at Un
 
 2. **[Visual Studio Code](https://code.visualstudio.com/) (medium).**
 
-   1. Create new GitHub repository with the template from [here](https://github.com/new?template_name=unitartucs-thesis-template&template_owner=sim642).
-   2. Clone your new GitHub repository locally.
-   3. Open it in Visual Studio Code.
-   4. Install [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) extension for Visual Studio Code.
-   5. _(Optional)_ Install [LTeX – LanguageTool grammar/spell checking](https://marketplace.visualstudio.com/items?itemName=valentjn.vscode-ltex) extension for Visual Studio Code.
+   1. Install Ubuntu packages (or equivalent) (in WSL on Windows):
+      ```console
+      sudo apt install --no-install-recommends --no-install-suggests texlive-plain-generic texlive-latex-extra texlive-lang-european latexmk texlive-fonts-extra tex-gyre texlive-bibtex-extra biber python3-pygments
+      ```
+   2. Create new GitHub repository with the template from [here](https://github.com/new?template_name=unitartucs-thesis-template&template_owner=sim642).
+   3. Clone your new GitHub repository locally.
+   4. Open it in Visual Studio Code.
+   5. Install [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) extension for Visual Studio Code.
+   6. _(Optional)_ Install [LTeX – LanguageTool grammar/spell checking](https://marketplace.visualstudio.com/items?itemName=valentjn.vscode-ltex) extension for Visual Studio Code.
 
 3. **Command line (hard).**
 
-   1. Download the template as zip, or create a new GitHub repository with the template and clone it (described above).
-   2. Compile with the following command line command: `latexmk -pdf thesis`
+   1. Install packages listed above.
+   2. Download the template as zip, or create a new GitHub repository with the template and clone it (described above).
+   3. Compile with the following command line command: `latexmk -pdf thesis`
 
 
 ### Configuration
