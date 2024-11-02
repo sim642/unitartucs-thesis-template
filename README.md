@@ -1,6 +1,10 @@
 # UniTartuCS-thesis-template
 
+Modernized (unofficial) LaTeX template for [bachelor's and master's thesis at University of Tartu Institute of Computer Science](https://cs.ut.ee/et/sisu/loputoode-tahtajad-ja-juhendid).
+
 ## Usage
+
+### Setup
 
 1. **[Overleaf](https://www.overleaf.com/) (easy).**
 
@@ -24,10 +28,21 @@
    2. Compile with the following command line command: `latexmk -pdf thesis`
 
 
+### Configuration
+
+The main file for the thesis is [`thesis.tex`](./thesis.tex) and (example) sections are in [`sections/`](./sections/).
+Follow the TODOs (prefixed with `% TODO:`) in [`thesis.tex`](./thesis.tex) and [`sections/info.tex`](./sections/info.tex) to configure the template:
+1. Choose thesis language.
+2. Fill in metadata (title, author, etc.).
+3. Choose citation and bibliography style.
+4. Fill in info page (abstract, keywords, CERCS code).
+
+
 ## About
 
 The original (unversioned) template was by Sven Laur, Liina Kamm, Tõnu Tamme, with the last change by Eero Vainikko on 2021-09-14.
 
 The template was modernized by Simmo Saan and is now version controlled on GitHub.
+Changes are described in [`CHANGELOG.md`](./CHANGELOG.md).
 Feel free to open issues on GitHub with problems and suggestions relating to the template.
 Pull requests with improvements are also welcome.
