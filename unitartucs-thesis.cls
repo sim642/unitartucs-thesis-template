@@ -119,6 +119,7 @@
 
     \begin{flushright}
     {
+    \large
     \setlength{\extrarowheight}{5pt}
     \renewcommand*{\and}{\\ & \sffamily}
     \newcommand*{\degree}[1]{, ##1}
