@@ -1,0 +1,11 @@
+\ProvidesFile{unitartucs-authoryear.bbx}[2024-11-02 v1.0 University of Tartu Institute of Computer Science bachelor's or master's thesis authoryear bibliography style]
+
+\RequireBibliographyStyle{authoryear-comp}
+\RequireBibliographyStyle{unitartucs}
+
+% TODO: why doesn't this work in bbx file but works in package argument?
+% \ExecuteBibliographyOptions{uniquename=init} % fix conflict between giveninits=true (from unitartucs) and uniquename=full (from authoryear-comp)
+
+\DeclareNameAlias{sortname}{family-given} % family name before given name for non-first authoryear - https://tex.stackexchange.com/a/545867
+
+\endinput
